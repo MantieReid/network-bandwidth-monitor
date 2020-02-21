@@ -8,14 +8,57 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="800" Height="800">
 
-    <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="215,117,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,152,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,194,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,244,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,290,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,336,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="215,381,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3"/>
+  <Grid Background="White" FocusVisualPrimaryBrush="#FF1F0000" BorderBrush="White" FocusVisualSecondaryBrush="#99FFFFFF">
+    <Grid.ColumnDefinitions>
 
-    </Grid>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*"/>
+
+
+
+
+
+
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+
+      <RowDefinition  Height="auto"/>
+      <!-- The First Row -->
+      <RowDefinition  Height="*"/>
+      <!-- The Second Row -->
+
+      <RowDefinition  Height="*"/>
+      <!-- The Third Row -->
+
+      <RowDefinition  Height="*"/>
+      <!-- The Fourth Row -->
+
+
+
+
+
+
+    </Grid.RowDefinitions>
+
+    <TextBlock HorizontalAlignment="Left" Margin="215,117,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF00FF17">
+      <TextBlock.SelectionHighlightColor>
+        <SolidColorBrush Color="{ThemeResource SystemAccentColorDark1}"/>
+      </TextBlock.SelectionHighlightColor>
+    </TextBlock>
+    <TextBlock HorizontalAlignment="Left" Margin="200,0,0,0" Text="Speed" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FF00FF17" Grid.Row="1" FocusVisualPrimaryBrush="#FF0023FF" Width="90"/>
+    <TextBlock HorizontalAlignment="Left" Margin="200,61,0,0" Text="Bytes sent" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF07F01C" Grid.Row="2" SelectionHighlightColor="#FF007FE4" FocusVisualSecondaryBrush="#99FF0000" Width="78"/>
+    <TextBlock HorizontalAlignment="Left" Margin="215,244,0,0" Text="bytes Received" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17" Grid.Row="3"/>
+    <TextBlock HorizontalAlignment="Left" Margin="215,290,0,0" Text="Downloaded" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17"/>
+    <TextBlock HorizontalAlignment="Left" Margin="215,336,0,0" Text="Uploaded" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17"/>
+    <TextBlock HorizontalAlignment="Left" Margin="215,381,0,0" Text="IP Address" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" FocusVisualPrimaryBrush="#FF00FF17" Foreground="#FF00FF17"/>
+    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,152,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,194,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,244,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,290,0,0" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,336,0,0" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,381,0,0" Text="172.160.9.52" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+    <ComboBox Margin="280,115,0,0" Width="120"/>
+
+  </Grid>
 </Page>
