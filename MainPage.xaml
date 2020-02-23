@@ -5,35 +5,76 @@
     xmlns:local="using:network_bandwidth_monitor"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="800" Height="800">
+    mc:Ignorable="d" FocusVisualPrimaryBrush="{x:Null}">
 
-  <Grid Background="White" FocusVisualPrimaryBrush="#FF1F0000" BorderBrush="White" FocusVisualSecondaryBrush="#99FFFFFF">
-    <Grid.ColumnDefinitions>
+  <Page.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Dictionary1.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Page.Resources>
+    <Page.BorderBrush>
+        <StaticResource ResourceKey="RegionBrush"/>
+    </Page.BorderBrush>
+    <Page.Background>
+        <StaticResource ResourceKey="RegionBrush"/>
+    </Page.Background>
 
-      <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="*"/>
+
+
+    <Grid>
+
+    <Grid.Resources>
+      <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+          <ResourceDictionary Source="Dictionary1.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary>
+    </Grid.Resources>
+        <Grid.Background>
+            <StaticResource ResourceKey="RegionBrush"/>
+        </Grid.Background>
+
+
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="auto" />
+
+            <ColumnDefinition Width="auto"/>
 
 
 
 
 
 
-    </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
 
-    <Grid.RowDefinitions>
+        <Grid.RowDefinitions>
 
-      <RowDefinition  Height="auto"/>
-      <!-- The First Row -->
-      <RowDefinition  Height="*"/>
-      <!-- The Second Row -->
+            <RowDefinition  Height="Auto"/>
+            <!-- The First Row(after Zero row) -->
+            <RowDefinition  Height="Auto" MinHeight="50"/>
+            <!-- The Second Row -->
 
-      <RowDefinition  Height="*"/>
-      <!-- The Third Row -->
+            <RowDefinition  Height="50"/>
+            <!-- The Third Row -->
 
-      <RowDefinition  Height="*"/>
-      <!-- The Fourth Row -->
+            <RowDefinition  Height="50"/>
+            <!-- The Fourth Row -->
 
+
+            <RowDefinition  Height="50"/>
+            <!-- The Fifth Row -->
+
+          <RowDefinition  Height="50"/>
+           <!-- The sixth Row -->
+
+          <RowDefinition  Height="50"/>
+          <!-- The seventh Row -->
+
+         
 
 
 
@@ -41,24 +82,24 @@
 
     </Grid.RowDefinitions>
 
-    <TextBlock HorizontalAlignment="Left" Margin="215,117,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF00FF17">
-      <TextBlock.SelectionHighlightColor>
-        <SolidColorBrush Color="{ThemeResource SystemAccentColorDark1}"/>
-      </TextBlock.SelectionHighlightColor>
-    </TextBlock>
-    <TextBlock HorizontalAlignment="Left" Margin="200,0,0,0" Text="Speed" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FF00FF17" Grid.Row="1" FocusVisualPrimaryBrush="#FF0023FF" Width="90"/>
-    <TextBlock HorizontalAlignment="Left" Margin="200,61,0,0" Text="Bytes sent" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF07F01C" Grid.Row="2" SelectionHighlightColor="#FF007FE4" FocusVisualSecondaryBrush="#99FF0000" Width="78"/>
-    <TextBlock HorizontalAlignment="Left" Margin="215,244,0,0" Text="bytes Received" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17" Grid.Row="3"/>
-    <TextBlock HorizontalAlignment="Left" Margin="215,290,0,0" Text="Downloaded" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17"/>
-    <TextBlock HorizontalAlignment="Left" Margin="215,336,0,0" Text="Uploaded" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17"/>
-    <TextBlock HorizontalAlignment="Left" Margin="215,381,0,0" Text="IP Address" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.552,3" FocusVisualPrimaryBrush="#FF00FF17" Foreground="#FF00FF17"/>
-    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,152,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,194,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,244,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,290,0,0" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,336,0,0" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-    <TextBlock HorizontalAlignment="Left" Height="19" Margin="301,381,0,0" Text="172.160.9.52" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-    <ComboBox Margin="280,115,0,0" Width="120"/>
+        <TextBlock  x:Name="Interface_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FF00FF17" Height="19" Width="54">
+            <TextBlock.SelectionHighlightColor>
+                <SolidColorBrush Color="{ThemeResource SystemAccentColorDark1}"/>
+            </TextBlock.SelectionHighlightColor>
+        </TextBlock>
+        <TextBlock x:Name="Speed_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Speed" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FF00FF17" Grid.Row="1" FocusVisualPrimaryBrush="#FF0023FF" Width="Auto" Height="Auto"/>
+        <TextBlock x:Name="Bytes_Sent_TextBlock" HorizontalAlignment="Left" Text="Bytes sent" TextWrapping="Wrap" VerticalAlignment="Center"  Foreground="#FF07F01C" Grid.Row="2" SelectionHighlightColor="#FF007FE4" FocusVisualSecondaryBrush="#99FF0000"/>
+        <TextBlock x:Name="Bytes_Received_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Bytes Received" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17" Grid.Row="3"/>
+        <TextBlock x:Name="Downloaded_Textblock"  HorizontalAlignment="Left" Margin="0,0,0,0" Text="Downloaded" TextWrapping="Wrap" VerticalAlignment="Center"  Foreground="#FF00FF17" Grid.Row="4"/>
+        <TextBlock x:Name="Uploaded_TextBlock" HorizontalAlignment="Left" Text="Uploaded" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF00FF17" Grid.Row="5"/>
+        <TextBlock x:Name="IP_Address_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="IP Address" TextWrapping="Wrap" VerticalAlignment="Center"  FocusVisualPrimaryBrush="#FF00FF17" Foreground="#FF00FF17" Grid.Row="6"/>
+        <TextBlock x:Name="Speed_Amount" HorizontalAlignment="Center" Height="19" Margin="0,0,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" AutomationProperties.Name="Speed_Amount" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock x:Name="Bytes_Sent_amount" HorizontalAlignment="Center" Height="19" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="2" Grid.Column="2"/>
+        <TextBlock x:Name="Bytes_Received_amount_Textblock" HorizontalAlignment="Center" Height="19" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="3" Grid.Column="3"/>
+        <TextBlock x:Name="Downloaded_amount_TextBlock" HorizontalAlignment="Center" Height="19" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="4" Grid.Column="4"/>
+        <TextBlock x:Name="Uploaded_Amount_TextBlock" HorizontalAlignment="Center" Height="19" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Row="5" Grid.Column="5"/>
+        <TextBlock x:Name="IP_Address_Info_TextBlock" HorizontalAlignment="Center" Height="19" Margin="0,0,0,0" Text="172.160.9.52" TextWrapping="Wrap" VerticalAlignment="Center"  Grid.Row="6" Grid.Column="6" Width="96"/>
+        <ComboBox x:Name="Interface_TextBlock1" Margin="0,0,0,0" Width="120" Height="32" Grid.Column="1"/>
 
-  </Grid>
+    </Grid>
 </Page>
