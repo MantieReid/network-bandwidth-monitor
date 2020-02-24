@@ -7,12 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" FocusVisualPrimaryBrush="{x:Null}" Background="#FFCFEAFF" BorderBrush="#FFCFEAFF">
 
-  
+
 
 
     <Grid>
 
-   
+
 
         <Grid.ColumnDefinitions>
 
@@ -29,7 +29,7 @@
 
         <Grid.RowDefinitions>
 
-            <RowDefinition  Height="Auto"/>
+            <RowDefinition  Height="Auto" MinHeight="50"/>
             <!-- The First Row(after Zero row) -->
             <RowDefinition  Height="Auto" MinHeight="50"/>
             <!-- The Second Row -->
@@ -44,19 +44,19 @@
             <RowDefinition  Height="50"/>
             <!-- The Fifth Row -->
 
-          <RowDefinition  Height="50"/>
-           <!-- The sixth Row -->
+            <RowDefinition  Height="50"/>
+            <!-- The sixth Row -->
 
-          <RowDefinition  Height="50"/>
-          <!-- The seventh Row -->
-
-         
+            <RowDefinition  Height="50"/>
+            <!-- The seventh Row -->
 
 
 
 
 
-    </Grid.RowDefinitions>
+
+
+        </Grid.RowDefinitions>
 
         <TextBlock  x:Name="Interface_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FF00FF17" Height="19" Width="54">
             <TextBlock.SelectionHighlightColor>
@@ -75,7 +75,14 @@
         <TextBlock x:Name="Downloaded_amount_TextBlock" HorizontalAlignment="Center" Height="19" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="4" Grid.Column="4"/>
         <TextBlock x:Name="Uploaded_Amount_TextBlock" HorizontalAlignment="Center" Height="19" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Top" Width="96" Grid.Row="5" Grid.Column="5"/>
         <TextBlock x:Name="IP_Address_Info_TextBlock" HorizontalAlignment="Center" Height="19" Margin="0,0,0,0" Text="172.160.9.52" TextWrapping="Wrap" VerticalAlignment="Center"  Grid.Row="6" Grid.Column="6" Width="96"/>
-        <ComboBox x:Name="Interface_TextBlock1" Margin="0,0,0,0" Width="120" Height="32" Grid.Column="1"/>
+        <ComboBox x:Name="Interface_ComboBox" Margin="0,7,0,0" Width="120" Height="32" Grid.Column="1" SelectionChanged="Interface_TextBlock1_SelectionChanged" BorderBrush="#66FF0000" PlaceholderForeground="#FF762EBD">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
 
     </Grid>
 </Page>
