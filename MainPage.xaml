@@ -5,38 +5,14 @@
     xmlns:local="using:network_bandwidth_monitor"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" FocusVisualPrimaryBrush="{x:Null}">
+    mc:Ignorable="d" FocusVisualPrimaryBrush="{x:Null}" Background="#FFCFEAFF" BorderBrush="#FFCFEAFF">
 
-  <Page.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="Dictionary1.xaml"/>
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Page.Resources>
-    <Page.BorderBrush>
-        <StaticResource ResourceKey="RegionBrush"/>
-    </Page.BorderBrush>
-    <Page.Background>
-        <StaticResource ResourceKey="RegionBrush"/>
-    </Page.Background>
-
+  
 
 
     <Grid>
 
-    <Grid.Resources>
-      <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-          <ResourceDictionary Source="Dictionary1.xaml"/>
-        </ResourceDictionary.MergedDictionaries>
-      </ResourceDictionary>
-    </Grid.Resources>
-        <Grid.Background>
-            <StaticResource ResourceKey="RegionBrush"/>
-        </Grid.Background>
-
-
+   
 
         <Grid.ColumnDefinitions>
 
