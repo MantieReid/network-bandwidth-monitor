@@ -165,7 +165,9 @@ namespace network_bandwidth_monitor
 
         Uploaded_Amount_TextBlock.Text = bytesSentSpeed.ToString() + " KB/s";
 
-       Bytes_Received_amount_Textblock.Text = bytesReceivedSpeed.ToString() + " KB/s";
+
+
+        Downloaded_amount_TextBlock.Text = bytesReceivedSpeed.ToString() + " KB/s";
 
         // get the IP address of the current selected network interface. 
         UnicastIPAddressInformationCollection ipInfo = nic.GetIPProperties().UnicastAddresses;

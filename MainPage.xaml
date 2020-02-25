@@ -58,17 +58,17 @@
 
         </Grid.RowDefinitions>
 
-        <TextBlock  x:Name="Interface_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FF00FF17" Height="19" Width="54">
+        <TextBlock  x:Name="Interface_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="Black" Height="19" Width="54" FocusVisualPrimaryBrush="Black">
             <TextBlock.SelectionHighlightColor>
                 <SolidColorBrush Color="{ThemeResource SystemAccentColorDark1}"/>
             </TextBlock.SelectionHighlightColor>
         </TextBlock>
-        <TextBlock x:Name="Speed_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Speed" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="#FF00FF17" Grid.Row="1" FocusVisualPrimaryBrush="#FF0023FF" Width="Auto" Height="Auto"/>
-        <TextBlock x:Name="Bytes_Sent_TextBlock" HorizontalAlignment="Left" Text="Bytes sent" TextWrapping="Wrap" VerticalAlignment="Center"  Foreground="#FF07F01C" Grid.Row="2" SelectionHighlightColor="#FF007FE4" FocusVisualSecondaryBrush="#99FF0000"/>
-        <TextBlock x:Name="Bytes_Received_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Bytes Received" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="0.552,3" Foreground="#FF00FF17" Grid.Row="3"/>
-        <TextBlock x:Name="Downloaded_Textblock"  HorizontalAlignment="Left" Margin="0,0,0,0" Text="Downloaded" TextWrapping="Wrap" VerticalAlignment="Center"  Foreground="#FF00FF17" Grid.Row="4"/>
-        <TextBlock x:Name="Uploaded_TextBlock" HorizontalAlignment="Left" Text="Uploaded" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF00FF17" Grid.Row="5"/>
-        <TextBlock x:Name="IP_Address_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="IP Address" TextWrapping="Wrap" VerticalAlignment="Center"  FocusVisualPrimaryBrush="#FF00FF17" Foreground="#FF00FF17" Grid.Row="6"/>
+        <TextBlock x:Name="Speed_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Speed" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="Black" Grid.Row="1" FocusVisualPrimaryBrush="#FF0023FF" Width="Auto" Height="Auto"/>
+        <TextBlock x:Name="Bytes_Sent_TextBlock" HorizontalAlignment="Left" Text="Bytes sent" TextWrapping="Wrap" VerticalAlignment="Center"  Foreground="Black" Grid.Row="2" SelectionHighlightColor="#FF007FE4" FocusVisualSecondaryBrush="#99FF0000"/>
+        <TextBlock x:Name="Bytes_Received_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Bytes Received" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="0.552,3" Foreground="Black" Grid.Row="3"/>
+        <TextBlock x:Name="Downloaded_Textblock"  HorizontalAlignment="Left" Margin="0,0,0,15" Text="Downloaded" TextWrapping="Wrap" VerticalAlignment="Bottom"  Foreground="Black" Grid.Row="4"/>
+        <TextBlock x:Name="Uploaded_TextBlock" HorizontalAlignment="Left" Text="Uploaded" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Grid.Row="5"/>
+        <TextBlock x:Name="IP_Address_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="IP Address" TextWrapping="Wrap" VerticalAlignment="Center"  FocusVisualPrimaryBrush="#FF00FF17" Foreground="Black" Grid.Row="6"/>
         <TextBlock x:Name="Speed_Amount" HorizontalAlignment="Center" Height="19" Margin="0,0,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" AutomationProperties.Name="Speed_Amount" Grid.Row="1" Grid.Column="1"/>
         <TextBlock x:Name="Bytes_Sent_amount" HorizontalAlignment="Center" Height="19" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="2" Grid.Column="2"/>
         <TextBlock x:Name="Bytes_Received_amount_Textblock" HorizontalAlignment="Center" Height="19" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="3" Grid.Column="3"/>
