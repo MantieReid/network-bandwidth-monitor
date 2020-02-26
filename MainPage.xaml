@@ -5,7 +5,11 @@
     xmlns:local="using:network_bandwidth_monitor"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" FocusVisualPrimaryBrush="{x:Null}" Background="#FFCFEAFF" BorderBrush="#FFCFEAFF">
+    mc:Ignorable="d" FocusVisualPrimaryBrush="Black" Background="#FF0D2644" BorderBrush="#FFCFEAFF">
+    <Page.Resources>
+        <Style TargetType="TextBlock"/>
+        <Style x:Key="TextBlockStyle1" TargetType="TextBlock"/>
+    </Page.Resources>
 
 
 
@@ -58,18 +62,29 @@
 
         </Grid.RowDefinitions>
 
-        <TextBlock  x:Name="Interface_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="Black" Height="19" Width="54" FocusVisualPrimaryBrush="Black">
-            <TextBlock.SelectionHighlightColor>
-                <SolidColorBrush Color="{ThemeResource SystemAccentColorDark1}"/>
-            </TextBlock.SelectionHighlightColor>
+        <TextBlock  x:Name="Interface_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Interface" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="Black" Height="19" Width="54" FocusVisualPrimaryBrush="#FF0023FF" FocusVisualSecondaryBrush="{ThemeResource SystemControlRevealFocusVisualBrush}">
+
         </TextBlock>
-        <TextBlock x:Name="Speed_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Speed" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="Black" Grid.Row="1" FocusVisualPrimaryBrush="#FF0023FF" Width="Auto" Height="Auto"/>
+        <TextBlock   x:Name="Speed_TextBlock" HorizontalAlignment="Center" Text="Speed" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="1" Width="74" Height="Auto" SelectionHighlightColor="#FF0073CD" Style="{ThemeResource BaseTextBlockStyle}" FocusVisualSecondaryBrush="#99F90000">
+            <TextBlock.FocusVisualPrimaryBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.FocusVisualPrimaryBrush>
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
         <TextBlock x:Name="Bytes_Sent_TextBlock" HorizontalAlignment="Left" Text="Bytes sent" TextWrapping="Wrap" VerticalAlignment="Center"  Foreground="Black" Grid.Row="2" SelectionHighlightColor="#FF007FE4" FocusVisualSecondaryBrush="#99FF0000"/>
         <TextBlock x:Name="Bytes_Received_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Bytes Received" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="0.552,3" Foreground="Black" Grid.Row="3"/>
         <TextBlock x:Name="Downloaded_Textblock"  HorizontalAlignment="Left" Margin="0,0,0,15" Text="Downloaded" TextWrapping="Wrap" VerticalAlignment="Bottom"  Foreground="Black" Grid.Row="4"/>
         <TextBlock x:Name="Uploaded_TextBlock" HorizontalAlignment="Left" Text="Uploaded" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" Grid.Row="5"/>
         <TextBlock x:Name="IP_Address_TextBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="IP Address" TextWrapping="Wrap" VerticalAlignment="Center"  FocusVisualPrimaryBrush="#FF00FF17" Foreground="Black" Grid.Row="6"/>
-        <TextBlock x:Name="Speed_Amount" HorizontalAlignment="Center" Height="19" Margin="0,0,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" AutomationProperties.Name="Speed_Amount" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Style="{StaticResource TextBlockStyle1}" x:Name="Speed_Amount" HorizontalAlignment="Center" Height="19" Margin="0,0,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" AutomationProperties.Name="Speed_Amount" Grid.Row="1" Grid.Column="1"/>
         <TextBlock x:Name="Bytes_Sent_amount" HorizontalAlignment="Center" Height="19" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="2" Grid.Column="2"/>
         <TextBlock x:Name="Bytes_Received_amount_Textblock" HorizontalAlignment="Center" Height="19" Text="0" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="3" Grid.Column="3"/>
         <TextBlock x:Name="Downloaded_amount_TextBlock" HorizontalAlignment="Center" Height="19" Text="0KB/s" TextWrapping="Wrap" VerticalAlignment="Center" Width="96" Grid.Row="4" Grid.Column="4"/>
