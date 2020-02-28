@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Network_Meter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Network Meter" Height="450" Width="800">
   <Grid>
 
     <Grid.ColumnDefinitions>
@@ -50,7 +50,26 @@
 
     <Label x:Name="InterfaceLabel" Content="Interface" Height="30" Margin="0,0,0,0" Width="Auto" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
     <Label x:Name="SpeedLabel" Content="Speed" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="1"/>
-    <Label x:Name="ByteSentLabel" Content="Bytes Sent" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Grid.Row="2"/>
+    <Label x:Name="ByteSentLabel" Content="Bytes Sent" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="2"/>
+
+    <Label x:Name="BytesReceivedLabel" Content="Bytes Received" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Left" Grid.Row="3"/>
+
+    <Label x:Name="DownloadLabel" Content="Download" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="4"/>
+
+    <Label x:Name="UploadLabel" Content="Upload" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="5"/>
+
+    <Label x:Name="IP_AdressLabel" Content="IP Address" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="6"/>
+    <ComboBox  x:Name="ComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="0,0,0,0" VerticalAlignment="Center" Width="115"/>
+    <Label   x:Name="SpeedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="45"/>
+    <Label   x:Name="BytesSentAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="45"/>
+    <Label   x:Name="BytesReceivedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="45"/>
+    <Label   x:Name="DownloadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="45"/>
+    <Label   x:Name="UploadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="45"/>
+    <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="" VerticalAlignment="Center" Width="45"/>
+
+
+
+
 
 
   </Grid>
