@@ -1,0 +1,15 @@
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Network Meter.exe.config
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Network Meter.exe
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Network Meter.pdb
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.csprojAssemblyReference.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\MainWindow.g.cs
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\App.g.cs
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter_MarkupCompile.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter_MarkupCompile.lref
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\MainWindow.baml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.g.resources
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network_Meter.Properties.Resources.resources
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.csproj.GenerateResource.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.csproj.CoreCompileInputs.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.exe
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.pdb
