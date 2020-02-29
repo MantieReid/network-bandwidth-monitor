@@ -1,11 +1,14 @@
-<Window x:Class="Network_Meter.MainWindow"
+<Controls:MetroWindow x:Class="Network_Meter.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        WindowCloseButtonStyle="{StaticResource MetroWindowButtonStyle}"
+                      
         xmlns:local="clr-namespace:Network_Meter"
         mc:Ignorable="d"
-        Title="Network Meter" Height="450" Width="800">
+        Title="App22" Height="450" Width="800" WindowTitleBrush="#FF0070FF" Background="#FF2E8AFF" NonActiveWindowTitleBrush="#FF0070FF" Foreground="Black" NonActiveBorderBrush="#FF0070FF" NonActiveGlowBrush="#FF0070FF" BorderBrush="Black" GlowBrush="Black" OverlayBrush="Black" OverrideDefaultWindowCommandsBrush="Black" TitleForeground="Black" OpacityMask="Black">
   <Grid>
 
     <Grid.ColumnDefinitions>
@@ -65,7 +68,7 @@
     <Label   x:Name="BytesReceivedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="45"/>
     <Label   x:Name="DownloadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="45"/>
     <Label   x:Name="UploadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="45"/>
-    <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="" VerticalAlignment="Center" Width="45"/>
+    <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="45"/>
 
 
 
@@ -73,4 +76,4 @@
 
 
   </Grid>
-</Window>
+</Controls:MetroWindow>
