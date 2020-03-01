@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+
         WindowCloseButtonStyle="{StaticResource MetroWindowButtonStyle}"
                       
         xmlns:local="clr-namespace:Network_Meter"
@@ -63,12 +65,12 @@
 
     <Label x:Name="IP_AdressLabel" Content="IP Address" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="6" Foreground="White"/>
     <ComboBox  x:Name="ComboBox_Network_interface" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="0,0,0,0" VerticalAlignment="Center" Width="115"/>
-    <Label   x:Name="SpeedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="45" Foreground="White"/>
-    <Label   x:Name="BytesSentAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="45" Foreground="White"/>
-    <Label   x:Name="BytesReceivedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="45" Foreground="White"/>
-    <Label   x:Name="DownloadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="45" Foreground="White"/>
-    <Label   x:Name="UploadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="45" Foreground="White"/>
-    <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="45" Foreground="White"/>
+    <Label   x:Name="SpeedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+    <Label   x:Name="BytesSentAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+    <Label   x:Name="BytesReceivedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+    <Label   x:Name="DownloadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+    <Label   x:Name="UploadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+    <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
 
 
 

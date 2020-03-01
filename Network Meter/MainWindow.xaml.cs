@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
@@ -27,7 +28,9 @@ namespace Network_Meter
         public MainWindow()
         {
             InitializeComponent();
-        }
+            this.StartTimers();
+
+    }
 
 
     /// <summary>
@@ -49,6 +52,10 @@ namespace Network_Meter
     private Timer timer;
 
     DispatcherTimer dispatcherTimer; // a new dispatcher timer variable.
+
+   // private Timer timer;
+
+   // DispatcherTimer dispatcherTimer; // a new dispatcher timer variable.
 
 
     public void StartTimers()
@@ -114,35 +121,57 @@ namespace Network_Meter
         IPv4InterfaceStatistics interfaceStats = nic.GetIPv4Statistics();
 
         //takes the bytes sent from the interface and put it in the text for the bytes sent amount text of the text block.
-        long bytesSentSpeed = (long)(interfaceStats.BytesSent - double.Parse(BytesSentAmountLabel.Content)) / 1024;
+
+        String BytesSentAmountCastContent2;
+        BytesSentAmountCastContent2 = (String)BytesSentAmountLabel.Content;
+
+       
+
+
+        long bytesSentSpeed = (long)(interfaceStats.BytesSent - double.Parse(BytesSentAmountCastContent2))  / 1024; //converts the bytes to a Kikibyte(KB).
+
+
+        // String BytesSentSpeedToDouble = Convert.ToDouble(by)
+        //long whatever = ByteSentSpeedToObject - (bytesSentSpeed / 1024);
+        BytesSentAmountLabel.Content = interfaceStats.BytesSent.ToString("N0"); // sets the label text to be equal to the bytes sent speed.
+
+
+
+        String BytesReceivedAmountCast;
+        BytesReceivedAmountCast = (String)BytesReceivedAmountLabel.Content;
 
         //takes the bytes received from the interface and put it in the text for the bytes received amount text of the text block.
-        long bytesReceivedSpeed = (long)(interfaceStats.BytesReceived - double.Parse(BytesReceivedAmountLabel.Content)) / 125000;
+        long bytesReceivedSpeed = (long)(interfaceStats.BytesReceived - double.Parse(BytesReceivedAmountCast)) / 1024;
+        //String ByteRecievedToString = bytesReceivedSpeed.ToString("N0") + " KB/s";  // converts it to a string with commas separating it.
+
+
+        BytesReceivedAmountLabel.Content = interfaceStats.BytesReceived.ToString("N0");
 
         // Update the labels
 
 
 
-        // takes the speed amount and puts it in the text of the speed amount text block. 
-        Speed_Amount.Text = nic.Speed.ToString();
+        long SpeedAmountBytes = (long)(nic.Speed / 1024);
+        String SpeedAmountBytesToString = SpeedAmountBytes.ToString("N0") + "KB/s";
+
+        SpeedAmountLabel.Content = nic.Speed.ToString();
 
 
 
 
 
-        // lblInterfaceType.Text = nic.NetworkInterfaceType.ToString();
 
 
 
-        Bytes_Received_amount_Textblock.Text = interfaceStats.BytesReceived.ToString("N0");
+        //Bytes_Received_amount_Textblock.Text = interfaceStats.BytesReceived.ToString("N0");
 
-        Bytes_Sent_amount.Text = interfaceStats.BytesSent.ToString("N0");
+       // Bytes_Sent_amount.Text = interfaceStats.BytesSent.ToString("N0");
 
-        Uploaded_Amount_TextBlock.Text = bytesSentSpeed.ToString() + " KB/s";
+        UploadAmountLabel.Content = bytesSentSpeed.ToString() + " KB/s";
 
 
 
-        Downloaded_amount_TextBlock.Text = bytesReceivedSpeed.ToString() + " KB/s";
+        DownloadAmountLabel.Content = bytesReceivedSpeed.ToString() + " KB/s";
 
         // get the IP address of the current selected network interface. 
         UnicastIPAddressInformationCollection ipInfo = nic.GetIPProperties().UnicastAddresses;
@@ -153,7 +182,7 @@ namespace Network_Meter
           if (item.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
 
           {
-            IP_Address_Info_TextBlock.Text = item.Address.ToString(); // add the IP address to the text of IP address info text block.
+            IP_Address_Of_Computer.Content = item.Address.ToString(); // add the IP address to the text of IP address info text block.
             break;
           }
         }
@@ -164,5 +193,14 @@ namespace Network_Meter
 
     }
 
+
+
+    void dispatcherTimer_Tick(Object sender, Object e)
+    {
+      InitializeNetworkInterface();
+      UpdateNetworkInterface();
+
+    }
   }
+
 }
