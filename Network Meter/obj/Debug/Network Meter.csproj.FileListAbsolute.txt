@@ -93,3 +93,17 @@ C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Mete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\MahApps.Metro.IconPacks.Zondicons.xml
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\App.baml
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.csproj.CopyComplete
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Win32.UI.XamlHost.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Win32.UI.XamlHost.Managed.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Win32.UI.XamlHost.winmd
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Wpf.UI.Controls.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Wpf.UI.XamlHost.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Win32.UI.XamlHost.Managed.pdb
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Win32.UI.XamlHost.Managed.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Wpf.UI.Controls.pdb
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Wpf.UI.Controls.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Wpf.UI.XamlHost.pdb
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Toolkit.Wpf.UI.XamlHost.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Dragablz.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Dragablz.pdb
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Dragablz.xml
