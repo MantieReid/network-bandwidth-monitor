@@ -201,6 +201,16 @@ namespace Network_Meter
       UpdateNetworkInterface();
 
     }
+
+    private void MenuItem_Click_Live_Chart_Open(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void MenuItem_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
   }
 
 }

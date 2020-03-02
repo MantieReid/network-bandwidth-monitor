@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "SCc+gzZo+tEV/7eKjvWFc94JUIIZxvnJBd6IwwNci1h67qRhEgZDMwQBQIpRDiE5qNnjxFnWp77OOxRrD/wIFw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gunzs\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.vcrtforwarders.140\\1.0.2-rc\\microsoft.vcrtforwarders.140.1.0.2-rc.nupkg.sha512"
+  ],
+  "logs": []
+}

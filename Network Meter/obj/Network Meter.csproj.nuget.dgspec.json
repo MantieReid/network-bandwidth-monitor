@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj",
+        "projectName": "Network Meter",
+        "projectPath": "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj",
+        "packagesPath": "C:\\Users\\gunzs\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gunzs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "LiveCharts.Wpf": {
+              "target": "Package",
+              "version": "[0.9.7, )"
+            },
+            "Microsoft.VCRTForwarders.140": {
+              "target": "Package",
+              "version": "[1.0.2-rc, )"
+            }
+          },
+          "imports": [
+            "uap10.0.18362"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
