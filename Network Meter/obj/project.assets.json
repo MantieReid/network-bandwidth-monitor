@@ -2,27 +2,6 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "LiveCharts/0.9.7": {
-        "type": "package",
-        "compile": {
-          "lib/net45/LiveCharts.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.dll": {}
-        }
-      },
-      "LiveCharts.Wpf/0.9.7": {
-        "type": "package",
-        "dependencies": {
-          "LiveCharts": "0.9.7"
-        },
-        "compile": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        }
-      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
@@ -230,137 +209,134 @@
             "rid": "win10-x86"
           }
         }
+      },
+      "OxyPlot.Core/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/OxyPlot.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.dll": {}
+        }
+      },
+      "OxyPlot.Wpf/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "OxyPlot.Core": "2.0.0"
+        },
+        "frameworkAssemblies": [
+          "ReachFramework",
+          "System.Printing"
+        ],
+        "compile": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "LiveCharts/0.9.7": {
-        "type": "package",
-        "compile": {
-          "lib/net45/LiveCharts.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.dll": {}
-        }
-      },
-      "LiveCharts.Wpf/0.9.7": {
-        "type": "package",
-        "dependencies": {
-          "LiveCharts": "0.9.7"
-        },
-        "compile": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        }
-      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
           "build/net45/Microsoft.VCRTForwarders.140.targets": {}
+        }
+      },
+      "OxyPlot.Core/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/OxyPlot.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.dll": {}
+        }
+      },
+      "OxyPlot.Wpf/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "OxyPlot.Core": "2.0.0"
+        },
+        "frameworkAssemblies": [
+          "ReachFramework",
+          "System.Printing"
+        ],
+        "compile": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "LiveCharts/0.9.7": {
-        "type": "package",
-        "compile": {
-          "lib/net45/LiveCharts.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.dll": {}
-        }
-      },
-      "LiveCharts.Wpf/0.9.7": {
-        "type": "package",
-        "dependencies": {
-          "LiveCharts": "0.9.7"
-        },
-        "compile": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        }
-      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
           "build/net45/Microsoft.VCRTForwarders.140.targets": {}
+        }
+      },
+      "OxyPlot.Core/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/OxyPlot.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.dll": {}
+        }
+      },
+      "OxyPlot.Wpf/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "OxyPlot.Core": "2.0.0"
+        },
+        "frameworkAssemblies": [
+          "ReachFramework",
+          "System.Printing"
+        ],
+        "compile": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "LiveCharts/0.9.7": {
-        "type": "package",
-        "compile": {
-          "lib/net45/LiveCharts.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.dll": {}
-        }
-      },
-      "LiveCharts.Wpf/0.9.7": {
-        "type": "package",
-        "dependencies": {
-          "LiveCharts": "0.9.7"
-        },
-        "compile": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.Wpf.dll": {}
-        }
-      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
           "build/net45/Microsoft.VCRTForwarders.140.targets": {}
+        }
+      },
+      "OxyPlot.Core/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/OxyPlot.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.dll": {}
+        }
+      },
+      "OxyPlot.Wpf/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "OxyPlot.Core": "2.0.0"
+        },
+        "frameworkAssemblies": [
+          "ReachFramework",
+          "System.Printing"
+        ],
+        "compile": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/OxyPlot.Wpf.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "LiveCharts/0.9.7": {
-      "sha512": "p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
-      "type": "package",
-      "path": "livecharts/0.9.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/LiveCharts.dll",
-        "lib/net40/LiveCharts.pdb",
-        "lib/net40/LiveCharts.xml",
-        "lib/net45/LiveCharts.dll",
-        "lib/net45/LiveCharts.pdb",
-        "lib/net45/LiveCharts.xml",
-        "lib/portable-net45+win8+wp8/LiveCharts.XML",
-        "lib/portable-net45+win8+wp8/LiveCharts.dll",
-        "lib/portable-net45+win8+wp8/LiveCharts.pdb",
-        "livecharts.0.9.7.nupkg.sha512",
-        "livecharts.nuspec",
-        "readme.txt"
-      ]
-    },
-    "LiveCharts.Wpf/0.9.7": {
-      "sha512": "lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
-      "type": "package",
-      "path": "livecharts.wpf/0.9.7",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/LiveCharts.Wpf.XML",
-        "lib/net40/LiveCharts.Wpf.dll",
-        "lib/net40/LiveCharts.Wpf.pdb",
-        "lib/net45/LiveCharts.Wpf.XML",
-        "lib/net45/LiveCharts.Wpf.dll",
-        "lib/net45/LiveCharts.Wpf.pdb",
-        "livecharts.wpf.0.9.7.nupkg.sha512",
-        "livecharts.wpf.nuspec",
-        "tools/install.ps1"
-      ]
-    },
     "Microsoft.VCRTForwarders.140/1.0.2-rc": {
       "sha512": "/r+sjtEeCIGyDhobIZ5hSmYhC/dSyGZxf1SxYJpElUhB0LMCktOMFs9gXrauXypIFECpVynNyVjAmJt6hjJ5oQ==",
       "type": "package",
@@ -444,12 +420,44 @@
         "runtimes/win10-x86/native/release/vcomp140_app.dll",
         "runtimes/win10-x86/native/release/vcruntime140_app.dll"
       ]
+    },
+    "OxyPlot.Core/2.0.0": {
+      "sha512": "gAbLVa+DxMNk1qtfzDQVU+lZ7XKRCKqQu6oYRFB1f6wVqseHL2EMk5Nlmw2rqkYEGHhxUxsPdjjAgJtzKVDacA==",
+      "type": "package",
+      "path": "oxyplot.core/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OxyPlot_128.png",
+        "lib/net45/OxyPlot.dll",
+        "lib/net45/OxyPlot.xml",
+        "lib/netstandard1.0/OxyPlot.dll",
+        "lib/netstandard1.0/OxyPlot.xml",
+        "oxyplot.core.2.0.0.nupkg.sha512",
+        "oxyplot.core.nuspec"
+      ]
+    },
+    "OxyPlot.Wpf/2.0.0": {
+      "sha512": "kmTfOnRPYkqucU2qYZaXeSKG3+6Y9gLHl1IfU2KSMBx0LsSx9yAfecIeBfgh7WDxCRPgSqOPL2BNUXtuv4VrcQ==",
+      "type": "package",
+      "path": "oxyplot.wpf/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "OxyPlot_128.png",
+        "lib/net45/OxyPlot.Wpf.dll",
+        "lib/net45/OxyPlot.Wpf.xml",
+        "lib/netcoreapp3.0/OxyPlot.Wpf.dll",
+        "lib/netcoreapp3.0/OxyPlot.Wpf.xml",
+        "oxyplot.wpf.2.0.0.nupkg.sha512",
+        "oxyplot.wpf.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "LiveCharts.Wpf >= 0.9.7",
-      "Microsoft.VCRTForwarders.140 >= 1.0.2-rc"
+      "Microsoft.VCRTForwarders.140 >= 1.0.2-rc",
+      "OxyPlot.Wpf >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -490,13 +498,13 @@
     "frameworks": {
       "net472": {
         "dependencies": {
-          "LiveCharts.Wpf": {
-            "target": "Package",
-            "version": "[0.9.7, )"
-          },
           "Microsoft.VCRTForwarders.140": {
             "target": "Package",
             "version": "[1.0.2-rc, )"
+          },
+          "OxyPlot.Wpf": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           }
         },
         "imports": [

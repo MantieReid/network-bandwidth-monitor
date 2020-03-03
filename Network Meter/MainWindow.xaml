@@ -4,135 +4,104 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-                      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
 
         WindowCloseButtonStyle="{StaticResource MetroWindowButtonStyle}"
                       
-        xmlns:local="clr-namespace:Network_Meter"
-        mc:Ignorable="d"
-        Title="Network Meter" Height="450" Width="800" WindowTitleBrush="#FF0070FF" Background="#FF2E8AFF" NonActiveWindowTitleBrush="#FF0070FF" Foreground="White" NonActiveBorderBrush="#FF0070FF" NonActiveGlowBrush="#FF0070FF" TitleForeground="White" OpacityMask="Black">
+        xmlns:local="clr-namespace:Network_Meter" xmlns:oxy="http://oxyplot.org/wpf"
+                      mc:Ignorable="d"
+        Title="Network Meter" Height="477" Width="800" WindowTitleBrush="#FF0070FF" Background="#FF2E8AFF" NonActiveWindowTitleBrush="#FF0070FF" Foreground="White" NonActiveBorderBrush="#FF0070FF" NonActiveGlowBrush="#FF0070FF" TitleForeground="White" OpacityMask="Black">
+
 
 
   <TabControl  HorizontalAlignment="Left" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto" Background="#FF2E8AFF">
 
-      <TabItem Header="TabItem">
-        <Grid Background="#FF2E8AFF">
+    <TabItem Header="Meter&#xD;&#xA;">
+      <Grid Background="#FF2E8AFF">
 
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"></ColumnDefinition>
 
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
+          <ColumnDefinition Width="Auto"></ColumnDefinition>
 
-          </Grid.ColumnDefinitions>
-
-
-          <Grid.RowDefinitions>
-
-            <RowDefinition  Height="Auto"/>
-            <!-- The First Row(after Zero row) -->
+        </Grid.ColumnDefinitions>
 
 
-            <RowDefinition Height="31"/>
-            <!-- The Second row  -->
+        <Grid.RowDefinitions>
 
-            <RowDefinition  Height="Auto" MinHeight="50"/>
-
-            <!-- The Third Row -->
-
-            <RowDefinition  Height="50"/>
-            <!-- The Fourth Row -->
-
-            <RowDefinition  Height="50"/>
-            <!-- The Fifth Row -->
+          <RowDefinition  Height="Auto"/>
+          <!-- The First Row(after Zero row) -->
 
 
-            <RowDefinition  Height="50"/>
-            <!-- The Sixth Row -->
+          <RowDefinition Height="31"/>
+          <!-- The Second row  -->
 
-            <RowDefinition  Height="50"/>
-            <!-- The Seventh Row -->
+          <RowDefinition  Height="Auto" MinHeight="50"/>
 
-            <RowDefinition  Height="50"/>
-            <!-- The Eigth Row -->
+          <!-- The Third Row -->
 
-            <RowDefinition  Height="50"/>
-            <!-- The Ninth Row -->
+          <RowDefinition  Height="50"/>
+          <!-- The Fourth Row -->
 
-
-
+          <RowDefinition  Height="50"/>
+          <!-- The Fifth Row -->
 
 
+          <RowDefinition  Height="50"/>
+          <!-- The Sixth Row -->
 
-          </Grid.RowDefinitions>
+          <RowDefinition  Height="50"/>
+          <!-- The Seventh Row -->
 
+          <RowDefinition  Height="50"/>
+          <!-- The Eigth Row -->
 
-          <Label x:Name="InterfaceLabel" Content="Interface" Height="30" Margin="0,0,0,0" Width="Auto" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White" Grid.Row="1"/>
-          <Label x:Name="SpeedLabel" Content="Speed" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="2" Foreground="White" Margin="0,11,0,10"/>
-          <Label x:Name="ByteSentLabel" Content="Bytes Sent" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="3" Foreground="White" Margin="0,10,0,11"/>
-
-          <Label x:Name="BytesReceivedLabel" Content="Bytes Received" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Left" Grid.Row="4" Foreground="White" Margin="0,11,0,10"/>
-
-          <Label x:Name="DownloadLabel" Content="Download" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="5" Foreground="White" Margin="0,10,0,11"/>
-
-          <Label x:Name="UploadLabel" Content="Upload" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="6" Foreground="White" Margin="0,11,0,10"/>
-
-          <Label x:Name="IP_AdressLabel" Content="IP Address" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="7" Foreground="White" Margin="0,10,0,11"/>
-          <ComboBox  x:Name="ComboBox_Network_interface" Grid.Column="1" Grid.Row ="1"  HorizontalAlignment="Left" Height="31" Margin="0,0" VerticalAlignment="Center" Width="115" />
-          <Label   x:Name="SpeedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="2" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
-          <Label   x:Name="BytesSentAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="3" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
-          <Label   x:Name="BytesReceivedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="4" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
-          <Label   x:Name="DownloadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="5" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
-          <Label   x:Name="UploadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="6" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
-          <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="7" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
-          <Button Content="Button" HorizontalAlignment="Left" Height="25" Margin="0,0,0,0" Grid.Row="8" VerticalAlignment="Top" Width="89"/>
-
-          <DockPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Width="60" Background="#FF0070FF"   >
-            <Menu DockPanel.Dock="Top" Height="auto" Width="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF0070FF">
-              <MenuItem Header="_About"  Click="MenuItem_Click" BorderBrush="#FF0070FF" Foreground="White" FontWeight="Bold" Height="31" Width="90">
-
-                <MenuItem.Background>
-                  <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF0070FF"/>
-                  </LinearGradientBrush>
-                </MenuItem.Background>
-
-
-              </MenuItem>
+          <RowDefinition  Height="Auto"/>
+          <!-- The Ninth Row -->
 
 
 
 
 
 
+        </Grid.RowDefinitions>
 
 
+        <Label x:Name="InterfaceLabel" Content="Interface" Height="30" Margin="0,0,0,0" Width="Auto" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White" Grid.Row="1"/>
+        <Label x:Name="SpeedLabel" Content="Speed" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="2" Foreground="White" Margin="0,11,0,10"/>
+        <Label x:Name="ByteSentLabel" Content="Bytes Sent" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="3" Foreground="White" Margin="0,10,0,11"/>
+
+        <Label x:Name="BytesReceivedLabel" Content="Bytes Received" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="4" Foreground="White" Margin="0,0,0,0"/>
+
+        <Label x:Name="DownloadLabel" Content="Download" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="5" Foreground="White" Margin="0,10,0,11"/>
+
+        <Label x:Name="UploadLabel" Content="Upload" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="6" Foreground="White" Margin="0,11,0,10"/>
+
+        <Label x:Name="IP_AdressLabel" Content="IP Address" Height="30" Width="Auto"   VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="7" Foreground="White" Margin="0,10,0,11"/>
+        <ComboBox  x:Name="ComboBox_Network_interface" Grid.Column="1" Grid.Row ="1"  HorizontalAlignment="Left" Height="31" Margin="0,0" VerticalAlignment="Center" Width="115" />
+        <Label   x:Name="SpeedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="2" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+        <Label   x:Name="BytesSentAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="3" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+        <Label   x:Name="BytesReceivedAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="4" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+        <Label   x:Name="DownloadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="5" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+        <Label   x:Name="UploadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="6" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+        <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="7" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
+        <Button x:Name="Open_Window_1" Grid.Row="8" Content="Open window 1" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,76,0" Click="Open_Window_1_Click"/>
+      </Grid>
 
 
+    </TabItem>
+    <TabItem Header="Chart">
 
+      <Grid Background="#FFE5E5E5">
 
+      </Grid>
 
+    </TabItem>
+    <TabItem Header="About">
+      <Grid Background="#FFE5E5E5"/>
+    </TabItem>
 
-
-
-
-
-
-
-
-
-
-            </Menu>
-
-          </DockPanel>
-        </Grid>
-
-
-      </TabItem>
-      <TabItem Header="TabItem">
-        <Grid Background="#FFE5E5E5"/>
-      </TabItem>
-    </TabControl>
+  </TabControl>
 
 
 

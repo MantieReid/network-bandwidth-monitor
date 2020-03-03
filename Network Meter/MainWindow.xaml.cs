@@ -17,6 +17,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using MahApps.Metro.Controls;
+using OxyPlot;
+using OxyPlot.Series;
 
 namespace Network_Meter
 {
@@ -25,12 +27,24 @@ namespace Network_Meter
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-            this.StartTimers();
-
+    public MainWindow()
+    {
+      InitializeComponent();
+     
+     
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /// <summary>
@@ -210,6 +224,12 @@ namespace Network_Meter
     private void MenuItem_Click(object sender, RoutedEventArgs e)
     {
 
+    }
+
+    private void Open_Window_1_Click(object sender, RoutedEventArgs e)
+    {
+      Window1 win1 = new Window1();
+      win1.Show();
     }
   }
 

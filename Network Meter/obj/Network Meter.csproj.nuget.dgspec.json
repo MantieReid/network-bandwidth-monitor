@@ -38,13 +38,13 @@
       "frameworks": {
         "net472": {
           "dependencies": {
-            "LiveCharts.Wpf": {
-              "target": "Package",
-              "version": "[0.9.7, )"
-            },
             "Microsoft.VCRTForwarders.140": {
               "target": "Package",
               "version": "[1.0.2-rc, )"
+            },
+            "OxyPlot.Wpf": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [
