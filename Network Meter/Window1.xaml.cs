@@ -26,8 +26,6 @@ namespace Network_Meter
 
     {
       InitializeComponent();
-
-
       this.Title = "Example 2";
       this.Points = new List<DataPoint>
                               {
@@ -38,6 +36,8 @@ namespace Network_Meter
                                   new DataPoint(40, 12),
                                   new DataPoint(50, 12)
                               };
+
+
     }
     public string Title { get; private set; }
 

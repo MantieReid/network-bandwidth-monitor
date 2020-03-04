@@ -234,6 +234,15 @@
         "runtime": {
           "lib/net45/OxyPlot.Wpf.dll": {}
         }
+      },
+      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
@@ -266,6 +275,15 @@
         },
         "runtime": {
           "lib/net45/OxyPlot.Wpf.dll": {}
+        }
+      },
+      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
         }
       }
     },
@@ -300,6 +318,15 @@
         "runtime": {
           "lib/net45/OxyPlot.Wpf.dll": {}
         }
+      },
+      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
@@ -332,6 +359,15 @@
         },
         "runtime": {
           "lib/net45/OxyPlot.Wpf.dll": {}
+        }
+      },
+      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
         }
       }
     }
@@ -452,12 +488,27 @@
         "oxyplot.wpf.2.0.0.nupkg.sha512",
         "oxyplot.wpf.nuspec"
       ]
+    },
+    "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
+      "sha512": "UqBiEXh2YmYdJE5BpJC9c1I+AzcmFlzZ1h7fn5iU2lhOLn3snSxqf46/2XHpoJetJBN4HAavqG77wzaBi5jxfQ==",
+      "type": "package",
+      "path": "system.windows.controls.datavisualization.toolkit/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.XML",
+        "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll",
+        "system.windows.controls.datavisualization.toolkit.4.0.0.nupkg.sha512",
+        "system.windows.controls.datavisualization.toolkit.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "Microsoft.VCRTForwarders.140 >= 1.0.2-rc",
-      "OxyPlot.Wpf >= 2.0.0"
+      "OxyPlot.Core >= 2.0.0",
+      "OxyPlot.Wpf >= 2.0.0",
+      "System.Windows.Controls.DataVisualization.Toolkit >= 4.0.0"
     ]
   },
   "packageFolders": {
@@ -502,9 +553,17 @@
             "target": "Package",
             "version": "[1.0.2-rc, )"
           },
+          "OxyPlot.Core": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "OxyPlot.Wpf": {
             "target": "Package",
             "version": "[2.0.0, )"
+          },
+          "System.Windows.Controls.DataVisualization.Toolkit": {
+            "target": "Package",
+            "version": "[4.0.0, )"
           }
         },
         "imports": [

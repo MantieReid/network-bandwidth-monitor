@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Toolkit.Wpf.UI.XamlHost</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2">
+            <summary>
+            Enables access to native methods on DesktopWindowXamlSourceNative version 2 for RS5
+            </summary>
+            <remarks>
+            Includes the method used to set the window handle of the <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> instance.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2.AttachToWindow(System.IntPtr)">
+            <summary>
+            Attaches the <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> to a window using a window handle.
+            </summary>
+            <param name="parentWnd">pointer to parent Wnd</param>
+            <remarks>
+            The associated window will be used to parent UWP XAML visuals, appearing
+            as UWP XAML's logical render target.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2.WindowHandle">
+            <summary>
+            Gets the handle associated with the <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2.PreTranslateMessage(System.Windows.Interop.MSG@)">
+            <summary>
+            Sends the <paramref name="message"/> to the internal <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> window handle.
+            </summary>
+            <returns>True if the <paramref name="message"/> was handled</returns>
+        </member>
+        <member name="T:Microsoft.Toolkit.Wpf.UI.XamlHost.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Toolkit.Wpf.UI.XamlHost.UwpUIElementExtensions">
+            <summary>
+            Extensions for use with UWP UIElement objects wrapped by the WindowsXamlHostBaseExt
+            </summary>
+        </member>
+        <member name="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost">
+            <summary>
+            WindowsXamlHost control hosts UWP XAML content inside the Windows Presentation Foundation
+            </summary>
+            <summary>
+            WindowsXamlHost control hosts UWP XAML content inside the Windows Presentation Foundation
+            </summary>
+            <summary>
+            Defines assembly visibility for <seealso cref="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost.Child">
+            <summary>
+            Gets or sets the root UWP XAML element displayed in the WPF control instance.
+            </summary>
+            <remarks>This UWP XAML element is the root element of the wrapped DesktopWindowXamlSource.</remarks>
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost.InitialTypeNameProperty">
+            <summary>
+            Gets XAML Content by type name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost.InitialTypeName">
+            <summary>
+            Gets or sets XAML Content by type name
+            </summary>
+            <example><code>XamlClassLibrary.MyUserControl</code></example>
+            <remarks>
+            Content creation is deferred until after the parent hwnd has been created.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost.BuildWindowCore(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Creates <see cref="T:Windows.UI.Xaml.Application" /> object, wrapped <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> instance; creates and
+            sets root UWP XAML element on DesktopWindowXamlSource.
+            </summary>
+            <param name="hwndParent">Parent window handle</param>
+            <returns>Handle to XAML window</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost.OnChildChanged">
+            <summary>
+            Set data context on <seealso cref="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost.Child"/> when it has changed.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase">
+            <summary>
+            WindowsXamlHost control hosts UWP XAML content inside the Windows Presentation Foundation
+            </summary>
+            <summary>
+            Focus and Keyboard handling for Focus integration with UWP XAML
+            </summary>
+            <summary>
+            Integrates UWP XAML in to WPF's layout system
+            </summary>
+            <summary>
+            Defines assembly visibility for <seealso cref="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase"/>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase._metadataContainer">
+            <summary>
+            An instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.IXamlMetadataContainer"/>. Required to
+            probe at runtime for custom UWP XAML type information.
+            This must be implemented by the instance of <seealso cref="T:Windows.UI.Xaml.Application"/>
+            </summary>
+            <remarks>
+            <seealso cref="T:Windows.UI.Xaml.Application"/> object is required for loading custom control metadata.  If a custom
+            Application object is not provided by the application, the host control will create an instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication"/>.
+            Instantiation of the application object must occur before creating the DesktopWindowXamlSource instance.
+            If no Application object is created before DesktopWindowXamlSource is created, DestkopWindowXamlSource
+            will create an instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication"/> that implements <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.IXamlMetadataContainer"/>.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase._xamlSource">
+            <summary>
+            UWP XAML DesktopWindowXamlSource instance that hosts XAML content in a win32 application
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase._childInternal">
+            <summary>
+            Private field that backs ChildInternal property.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.ChildChanged">
+            <summary>
+                Fired when WindowsXamlHost root UWP XAML content has been updated
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase"/> class.
+            </summary>
+            <remarks>
+            Default constructor is required for use in WPF markup. When the default constructor is called,
+            object properties have not been set. Put WPF logic in OnInitialized.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase"/> class.
+            </summary>
+            <remarks>
+            Constructor is required for use in WPF markup. When the default constructor is called,
+            object properties have not been set. Put WPF logic in OnInitialized.
+            </remarks>
+            <param name="typeName">UWP XAML Type name</param>
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.MetadataContainer">
+            <summary>
+            Gets the current instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.Bind(System.String,System.Windows.DependencyProperty,Windows.UI.Xaml.DependencyProperty,System.Object,System.ComponentModel.BindingDirection)">
+            <summary>
+            Binds this wrapper object's exposed WPF DependencyProperty with the wrapped UWP object's DependencyProperty
+            for what effectively works as a regular one- or two-way binding.
+            </summary>
+            <param name="propertyName">the registered name of the dependency property</param>
+            <param name="wpfProperty">the DependencyProperty of the wrapper</param>
+            <param name="uwpProperty">the related DependencyProperty of the UWP control</param>
+            <param name="converter">a converter, if one's needed</param>
+            <param name="direction">indicates that the binding should be one or two directional.  If one way, the Uwp control is only updated from the wrapper.</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.OnInitialized(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.ChildInternal">
+            <summary>
+            Gets or sets the root UWP XAML element displayed in the WPF control instance.
+            </summary>
+            <value>The <see cref="T:Windows.UI.Xaml.UIElement"/> child.</value>
+            <remarks>This UWP XAML element is the root element of the wrapped <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" />.</remarks>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.OnChildChanged">
+            <summary>
+            Called when the property <seealso cref="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.ChildInternal"/> has changed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.GetUwpInternalObject">
+            <summary>
+            Exposes ChildInternal without exposing its actual Type.
+            </summary>
+            <returns>the underlying UWP child object</returns>
+        </member>
+        <member name="P:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.IsDisposed">
+            <summary>
+            Gets a value indicating whether this wrapper control instance been disposed
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.BuildWindowCore(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Creates <see cref="T:Windows.UI.Xaml.Application" /> object, wrapped <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> instance; creates and
+            sets root UWP XAML element on <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" />.
+            </summary>
+            <param name="hwndParent">Parent window handle</param>
+            <returns>Handle to XAML window</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.SetContent">
+            <summary>
+            The default implementation of SetContent applies ChildInternal to desktopWindowXamSource.Content.
+            Override this method if that shouldn't be the case.
+            For example, override if your control should be a child of another WindowsXamlHostBase-based control.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.OnParentClosed(System.Object,System.EventArgs)">
+            <summary>
+            Disposes the current instance in response to the parent window getting destroyed.
+            </summary>
+            <param name="sender">Paramter sender is ignored</param>
+            <param name="e">Parameter args is ignored</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.DestroyWindowCore(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            WPF framework request to destroy control window.  Cleans up the HwndIslandSite created by DesktopWindowXamlSource
+            </summary>
+            <param name="hwnd">Handle of window to be destroyed</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.Dispose(System.Boolean)">
+            <summary>
+            WindowsXamlHost Dispose
+            </summary>
+            <param name="disposing">Is disposing?</param>
+        </member>
+        <member name="F:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.MapDirectionToReason">
+            <summary>
+            Dictionary that maps WPF (host framework) FocusNavigationDirection to UWP XAML XxamlSourceFocusNavigationReason
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.MapReasonToDirection">
+            <summary>
+            Dictionary that maps UWP XAML XamlSourceFocusNavigationReason to WPF (host framework) FocusNavigationDirection
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase._lastFocusRequest">
+            <summary>
+            Last Focus Request GUID to uniquely identify Focus operations, primarily used with error callbacks
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Override for OnGotFocus that passes NavigateFocus on to the DesktopXamlSource instance
+            </summary>
+            <param name="e">RoutedEventArgs</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.TabIntoCore(System.Windows.Input.TraversalRequest)">
+            <summary>
+            Process Tab from host framework
+            </summary>
+            <param name="request"><see cref="T:System.Windows.Input.TraversalRequest"/> that contains requested navigation direction</param>
+            <returns>Did handle tab</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.BoundsRelativeTo(System.Windows.FrameworkElement,System.Windows.Media.Visual)">
+            <summary>
+            Transform bounds relative to FrameworkElement
+            </summary>
+            <param name="sibling1">base rectangle</param>
+            <param name="sibling2">second of pair to transform</param>
+            <returns>result of transformed rectangle</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.OnTakeFocusRequested(System.Object,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs)">
+            <summary>
+            Handles the <see cref="E:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource.TakeFocusRequested" /> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures wrapped UWP XAML content using passed in size constraint
+            </summary>
+            <param name="constraint">Available Size</param>
+            <returns>XAML DesiredSize</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arranges wrapped UWP XAML content using passed in size constraint
+            </summary>
+            <param name="finalSize">Final Size</param>
+            <returns>Size</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.IsXamlContentLoaded">
+            <summary>
+            Is the Xaml Content loaded and live?
+            </summary>
+            <returns>True if the Xaml content is properly loaded</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase.XamlContentSizeChanged(System.Object,Windows.UI.Xaml.SizeChangedEventArgs)">
+            <summary>
+            UWP XAML content size changed
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Windows.UI.Xaml.SizeChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostWrapperConverter">
+            <summary>
+            Dual interface (<see cref="T:System.Windows.Data.IValueConverter"/> and <see cref="T:Windows.UI.Xaml.Data.IValueConverter"/>),
+            assumes that the conversion is between a <see cref="T:Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHostBase"/> and its wrapped <see cref="T:Windows.UI.Xaml.UIElement"/>
+            and attempts to return the correct instance of each.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+            xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"  
+xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"           
 
         WindowCloseButtonStyle="{StaticResource MetroWindowButtonStyle}"
                       
@@ -93,6 +95,9 @@
     <TabItem Header="Chart">
 
       <Grid Background="#FFE5E5E5">
+        <DVC:Chart Name="MyChart"  Width="400" Height="250"    
+Background="YellowGreen">
+        </DVC:Chart>
 
       </Grid>
 

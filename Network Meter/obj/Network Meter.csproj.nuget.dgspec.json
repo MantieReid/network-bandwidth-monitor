@@ -42,9 +42,17 @@
               "target": "Package",
               "version": "[1.0.2-rc, )"
             },
+            "OxyPlot.Core": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "OxyPlot.Wpf": {
               "target": "Package",
               "version": "[2.0.0, )"
+            },
+            "System.Windows.Controls.DataVisualization.Toolkit": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [

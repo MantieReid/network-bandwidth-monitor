@@ -112,3 +112,4 @@ C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Mete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Window1.g.cs
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Window1.baml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll

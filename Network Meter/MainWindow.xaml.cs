@@ -29,9 +29,11 @@ namespace Network_Meter
     {
     public MainWindow()
     {
+
       InitializeComponent();
-     
-     
+      this.StartTimers();
+
+
     }
 
 
