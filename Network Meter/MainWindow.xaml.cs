@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.DataVisualization.Charting;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -19,6 +20,7 @@ using System.Windows.Threading;
 using MahApps.Metro.Controls;
 using OxyPlot;
 using OxyPlot.Series;
+using LineSeries = System.Windows.Controls.DataVisualization.Charting.LineSeries;
 
 namespace Network_Meter
 {
@@ -38,7 +40,7 @@ namespace Network_Meter
 
 
 
-
+   
 
 
 

@@ -94,10 +94,11 @@ xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;asse
     </TabItem>
     <TabItem Header="Chart">
 
+
+      <!-- Implement Chart here. Use the one you got from the video. If you cant get it to work, We might just have to scrap the idea or just simply convert the data to an excel chart.-->
       <Grid Background="#FFE5E5E5">
-        <DVC:Chart Name="MyChart"  Width="400" Height="250"    
-Background="YellowGreen">
-        </DVC:Chart>
+       
+          
 
       </Grid>
 
