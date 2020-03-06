@@ -26,8 +26,18 @@ namespace Network_Meter
 
     {
       InitializeComponent();
-      this.Title = "Example 2";
-      this.Points = new List<DataPoint>
+      
+
+
+    }
+
+    public class MainViewModel
+    {
+
+      public MainViewModel()
+      {
+        this.Title = "Example 2";
+        this.Points = new List<DataPoint>
                               {
                                   new DataPoint(0, 4),
                                   new DataPoint(10, 13),
@@ -36,12 +46,12 @@ namespace Network_Meter
                                   new DataPoint(40, 12),
                                   new DataPoint(50, 12)
                               };
+      }
 
+      public string Title { get; private set; }
 
+      public IList<DataPoint> Points { get; private set; }
     }
-    public string Title { get; private set; }
-
-    public IList<DataPoint> Points { get; private set; }
 
   }
 }

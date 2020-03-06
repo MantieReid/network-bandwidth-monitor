@@ -21,6 +21,12 @@ using MahApps.Metro.Controls;
 using OxyPlot;
 using OxyPlot.Series;
 using LineSeries = System.Windows.Controls.DataVisualization.Charting.LineSeries;
+using OxyPlot;
+using OxyPlot.Series;
+using Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
+using Word = Microsoft.Office.Interop.Word;
+
 
 namespace Network_Meter
 {
@@ -34,17 +40,47 @@ namespace Network_Meter
 
       InitializeComponent();
       this.StartTimers();
+      this.DataContext = this;
+      GenerateExcelFile();
+
 
 
     }
 
 
-
-   
-
+    //create a function here to check if the excel file exists, if it does, then generate the file. 
 
 
 
+
+    // this function will generate the excel file
+    private void GenerateExcelFile()
+    {
+      var excelApp = new Excel.Application();
+
+      //make the object visible
+      excelApp.Visible = true;
+
+      //create a new empty workbook and add it to the collection returned by proprety workbooks.
+      excelApp.Workbooks.Add();
+
+      // This example uses a single workSheet. The explicit type casting is
+      // removed in a later procedure.
+      Excel._Worksheet worksheet = (Excel.Worksheet)excelApp.ActiveSheet;
+
+
+      worksheet.Cells[1, "A"] = "Date";
+      worksheet.Cells[1, "B"] = "Upload";
+      worksheet.Cells[1, "C"] = "Download";
+
+
+
+
+      //saves the excel file
+
+      worksheet.SaveAs("NetworkMeterReport.xlsx");
+
+    }
 
 
 
@@ -122,6 +158,8 @@ namespace Network_Meter
 
 
     }
+
+    //TODO:later on have the results of upload and downloaded added to a dictionary.The Key will be the date and time.  Datetime: current date and time.  Upload: upload amount. Download: download amount. 
 
     private void UpdateNetworkInterface()
     {

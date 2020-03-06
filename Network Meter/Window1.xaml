@@ -6,9 +6,7 @@
         xmlns:local="clr-namespace:Network_Meter" xmlns:oxy="http://oxyplot.org/wpf"
         mc:Ignorable="d"
         Title="Window1" Height="350" Width="525" Background="White">
-  <Window.DataContext>
-    <local:MainWindow/>
-  </Window.DataContext>
+  
 
   <Grid>
     <oxy:Plot Title="{Binding Title}" Background="{x:Null}">
