@@ -94,7 +94,7 @@ xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;asse
         <Label   x:Name="DownloadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="5" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
         <Label   x:Name="UploadAmountLabel" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="6" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
         <Label   x:Name="IP_Address_Of_Computer" Content="0" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="0,12" Grid.Row="7" VerticalAlignment="Center" Width="Auto" Foreground="White"/>
-        <Button x:Name="Open_Window_1" Grid.Row="8" Content="Open window 1" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,76,0" Click="Open_Window_1_Click"/>
+        <Button x:Name="Open_Window_1" Grid.Row="8" Content="Generate Report" Background="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,76,0" Click="Open_Window_1_Click"/>
       </Grid>
 
 

@@ -25,7 +25,6 @@ using OxyPlot;
 using OxyPlot.Series;
 using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
-using Word = Microsoft.Office.Interop.Word;
 
 
 namespace Network_Meter
@@ -41,7 +40,6 @@ namespace Network_Meter
       InitializeComponent();
       this.StartTimers();
       this.DataContext = this;
-      GenerateExcelFile();
 
 
 
@@ -72,6 +70,7 @@ namespace Network_Meter
       worksheet.Cells[1, "A"] = "Date";
       worksheet.Cells[1, "B"] = "Upload";
       worksheet.Cells[1, "C"] = "Download";
+
 
 
 
@@ -160,6 +159,13 @@ namespace Network_Meter
     }
 
     //TODO:later on have the results of upload and downloaded added to a dictionary.The Key will be the date and time.  Datetime: current date and time.  Upload: upload amount. Download: download amount. 
+
+
+    Dictionary<String, Object> DataDictionary = new Dictionary<String, Object>();
+
+
+
+
 
     private void UpdateNetworkInterface()
     {
@@ -270,8 +276,9 @@ namespace Network_Meter
 
     private void Open_Window_1_Click(object sender, RoutedEventArgs e)
     {
-      Window1 win1 = new Window1();
-      win1.Show();
+      //Window1 win1 = new Window1();
+      //win1.Show();
+      GenerateExcelFile();
     }
   }
 
