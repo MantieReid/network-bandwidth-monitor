@@ -38,17 +38,13 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "IronXL.Excel": {
+              "target": "Package",
+              "version": "[2019.5.2, )"
+            },
             "Microsoft.VCRTForwarders.140": {
               "target": "Package",
               "version": "[1.0.2-rc, )"
-            },
-            "OxyPlot.Core": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "OxyPlot.Wpf": {
-              "target": "Package",
-              "version": "[2.0.0, )"
             },
             "System.Windows.Controls.DataVisualization.Toolkit": {
               "target": "Package",

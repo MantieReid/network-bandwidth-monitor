@@ -18,14 +18,14 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using MahApps.Metro.Controls;
-using OxyPlot;
-using OxyPlot.Series;
+using IronXL;
+
+
 using LineSeries = System.Windows.Controls.DataVisualization.Charting.LineSeries;
-using OxyPlot;
-using OxyPlot.Series;
+
 using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
-
+using System.IO;
 
 namespace Network_Meter
 {
@@ -70,6 +70,7 @@ namespace Network_Meter
       worksheet.Cells[1, "A"] = "Date";
       worksheet.Cells[1, "B"] = "Upload";
       worksheet.Cells[1, "C"] = "Download";
+
 
 
 
@@ -162,9 +163,138 @@ namespace Network_Meter
 
 
     Dictionary<String, Object> DataDictionary = new Dictionary<String, Object>();
+    //Tuple<String, int, Object> DataTuple;
+
+    // Datat
 
 
 
+    private void GenerateExcelFileandUpdate(string upload, string Download)
+    {
+      //use the code that is provided by microsoft to do this.
+
+
+      try
+      {
+        var excelApp = new Excel.Application();
+
+        //make the object visible
+        excelApp.Visible = true;
+
+        //create a new empty workbook and add it to the collection returned by proprety workbooks.
+        excelApp.Workbooks.Add();
+
+        // This example uses a single workSheet. The explicit type casting is
+        // removed in a later procedure.
+        Excel._Worksheet worksheet = (Excel.Worksheet)excelApp.ActiveSheet;
+
+
+        worksheet.Cells[1, "A"] = "Date";
+        worksheet.Cells[1, "B"] = "Upload";
+        worksheet.Cells[1, "C"] = "Download";
+
+
+
+
+
+
+        //saves the excel file
+
+        worksheet.SaveAs("/NetworkMeterReport.xlsx");
+      }
+
+      catch(IOException)
+      {
+
+        String path = "/NetworkMeterReport.xlsx";
+        var excelApp2 = new Excel.Application();
+        Workbook wb;
+        Worksheet ws;
+
+        wb = excelApp2.Workbooks.Open(path); // open the excel file that is already there.
+        ws = wb.Worksheets[1];
+
+        //LastRowis = ws.shee
+
+           //gets the last row that is empty
+           object nInLastRow = ws.Cells.Find("*", System.Reflection.Missing.Value, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
+
+        //date time object
+        DateTime now = DateTime.Now;
+
+
+        ws.Cells[nInLastRow, "A"] = now; //add the Date string to the cell. 
+        ws.Cells[nInLastRow, "B"] = upload; // add the upload string to the cell 
+        ws.Cells[nInLastRow, "C"] = Download; // add the download string to the cell
+
+
+
+
+
+        // public string Readcell(int i, int j)
+        //{
+
+        //i++;
+        //j++;
+        //if(ws.Cells[i,j].value2 != null)
+        //{
+
+        //}
+
+
+
+      }
+
+
+
+
+    }
+
+
+    
+
+
+
+
+
+
+
+    //dont use this. IronXl is not developed well enough yet. 
+    private void GenerateExcelFileandUpdatewhateverdonotusethis(string upload, string Download)
+    {
+      try
+      {
+        //create a new excel work book document.
+        WorkBook Dataworkbook = WorkBook.Create(ExcelFileFormat.XLSX);
+
+        Dataworkbook.Metadata.Author = "Network bandwidth meter";
+
+        //add a blank sheet
+       WorkSheet HourlySheet = Dataworkbook.CreateWorkSheet("Upload and download");
+
+        //Add data to the worksheet.
+        HourlySheet["A1"].Value = "DateTime";
+        HourlySheet["B1"].Value = "Upload";
+        HourlySheet["C1"].Value = "Download";
+        //HourlySheet.range
+
+        //save the excel file.
+        Dataworkbook.SaveAs("NetworkMeterData.xlsx");
+
+
+     
+       
+
+      }
+
+      catch(IOException) // mostly likekly because the file already exists, or maybe it cant access it. Which is due to the user having the file open. 
+      {
+        var exists = File.Exists("/NetworkMeterData.xlsx"); // check if the file exists.
+
+
+
+      }
+    }
 
 
     private void UpdateNetworkInterface()
@@ -174,6 +304,7 @@ namespace Network_Meter
         // Grab NetworkInterface object that describes the current interface
         NetworkInterface nic = nicArr[ComboBox_Network_interface.SelectedIndex];
 
+        
 
         IPInterfaceProperties properties = nic.GetIPProperties();
         Object test = nic.Speed;
@@ -234,6 +365,24 @@ namespace Network_Meter
 
 
         DownloadAmountLabel.Content = bytesReceivedSpeed.ToString() + " KB/s";
+
+
+        //gets the current date and time. 
+        DateTime now  = DateTime.Now;
+
+
+
+        //add the current upload speed to the tuple.
+
+        //var DataStuff = new List<Tuple<String, String, Object>>
+
+        Tuple<String, String, Object> DataTuple = new Tuple<String, String, Object>(now.ToString(), "Upload", bytesSentSpeed.ToString());
+
+        //DataTuple.
+
+
+
+        //TODO: Create a function here that will add the new upload value to the excel sheet. Updates it. 
 
         // get the IP address of the current selected network interface. 
         UnicastIPAddressInformationCollection ipInfo = nic.GetIPProperties().UnicastAddresses;

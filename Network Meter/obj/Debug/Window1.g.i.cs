@@ -10,7 +10,6 @@
 //------------------------------------------------------------------------------
 
 using Network_Meter;
-using OxyPlot.Wpf;
 using System;
 using System.Diagnostics;
 using System.Windows;

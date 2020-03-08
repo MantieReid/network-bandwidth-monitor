@@ -2,6 +2,25 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "IronXL.Excel/2019.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration",
+          "System.Data",
+          "System.Drawing",
+          "System.IO.Compression.FileSystem",
+          "System.Numerics",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/IronXL.dll": {}
+        },
+        "runtime": {
+          "lib/net45/IronXL.dll": {}
+        }
+      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
@@ -210,31 +229,6 @@
           }
         }
       },
-      "OxyPlot.Core/2.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net45/OxyPlot.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.dll": {}
-        }
-      },
-      "OxyPlot.Wpf/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "OxyPlot.Core": "2.0.0"
-        },
-        "frameworkAssemblies": [
-          "ReachFramework",
-          "System.Printing"
-        ],
-        "compile": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
-        }
-      },
       "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
         "type": "package",
         "compile": {
@@ -246,35 +240,29 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "IronXL.Excel/2019.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration",
+          "System.Data",
+          "System.Drawing",
+          "System.IO.Compression.FileSystem",
+          "System.Numerics",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/IronXL.dll": {}
+        },
+        "runtime": {
+          "lib/net45/IronXL.dll": {}
+        }
+      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
           "build/net45/Microsoft.VCRTForwarders.140.targets": {}
-        }
-      },
-      "OxyPlot.Core/2.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net45/OxyPlot.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.dll": {}
-        }
-      },
-      "OxyPlot.Wpf/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "OxyPlot.Core": "2.0.0"
-        },
-        "frameworkAssemblies": [
-          "ReachFramework",
-          "System.Printing"
-        ],
-        "compile": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
         }
       },
       "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
@@ -288,35 +276,29 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "IronXL.Excel/2019.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration",
+          "System.Data",
+          "System.Drawing",
+          "System.IO.Compression.FileSystem",
+          "System.Numerics",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/IronXL.dll": {}
+        },
+        "runtime": {
+          "lib/net45/IronXL.dll": {}
+        }
+      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
           "build/net45/Microsoft.VCRTForwarders.140.targets": {}
-        }
-      },
-      "OxyPlot.Core/2.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net45/OxyPlot.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.dll": {}
-        }
-      },
-      "OxyPlot.Wpf/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "OxyPlot.Core": "2.0.0"
-        },
-        "frameworkAssemblies": [
-          "ReachFramework",
-          "System.Printing"
-        ],
-        "compile": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
         }
       },
       "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
@@ -330,35 +312,29 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "IronXL.Excel/2019.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration",
+          "System.Data",
+          "System.Drawing",
+          "System.IO.Compression.FileSystem",
+          "System.Numerics",
+          "System.Runtime.Serialization",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/IronXL.dll": {}
+        },
+        "runtime": {
+          "lib/net45/IronXL.dll": {}
+        }
+      },
       "Microsoft.VCRTForwarders.140/1.0.2-rc": {
         "type": "package",
         "build": {
           "build/net45/Microsoft.VCRTForwarders.140.targets": {}
-        }
-      },
-      "OxyPlot.Core/2.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net45/OxyPlot.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.dll": {}
-        }
-      },
-      "OxyPlot.Wpf/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "OxyPlot.Core": "2.0.0"
-        },
-        "frameworkAssemblies": [
-          "ReachFramework",
-          "System.Printing"
-        ],
-        "compile": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
-        },
-        "runtime": {
-          "lib/net45/OxyPlot.Wpf.dll": {}
         }
       },
       "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
@@ -373,6 +349,22 @@
     }
   },
   "libraries": {
+    "IronXL.Excel/2019.5.2": {
+      "sha512": "hKZD4w84+rAQnbyjIQE1csqWTLW1oI40eXX6LItewg5PeGIrD70/dsT3WMAqCrrsQ0AQrXhbjZD7Za0MbKuD6Q==",
+      "type": "package",
+      "path": "ironxl.excel/2019.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ironxl.excel.2019.5.2.nupkg.sha512",
+        "ironxl.excel.nuspec",
+        "lib/net45/IronXL.dll",
+        "lib/net45/IronXL.xml",
+        "lib/netstandard2.0/IronXL.dll",
+        "lib/netstandard2.0/IronXL.xml",
+        "readme.txt"
+      ]
+    },
     "Microsoft.VCRTForwarders.140/1.0.2-rc": {
       "sha512": "/r+sjtEeCIGyDhobIZ5hSmYhC/dSyGZxf1SxYJpElUhB0LMCktOMFs9gXrauXypIFECpVynNyVjAmJt6hjJ5oQ==",
       "type": "package",
@@ -457,38 +449,6 @@
         "runtimes/win10-x86/native/release/vcruntime140_app.dll"
       ]
     },
-    "OxyPlot.Core/2.0.0": {
-      "sha512": "gAbLVa+DxMNk1qtfzDQVU+lZ7XKRCKqQu6oYRFB1f6wVqseHL2EMk5Nlmw2rqkYEGHhxUxsPdjjAgJtzKVDacA==",
-      "type": "package",
-      "path": "oxyplot.core/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "OxyPlot_128.png",
-        "lib/net45/OxyPlot.dll",
-        "lib/net45/OxyPlot.xml",
-        "lib/netstandard1.0/OxyPlot.dll",
-        "lib/netstandard1.0/OxyPlot.xml",
-        "oxyplot.core.2.0.0.nupkg.sha512",
-        "oxyplot.core.nuspec"
-      ]
-    },
-    "OxyPlot.Wpf/2.0.0": {
-      "sha512": "kmTfOnRPYkqucU2qYZaXeSKG3+6Y9gLHl1IfU2KSMBx0LsSx9yAfecIeBfgh7WDxCRPgSqOPL2BNUXtuv4VrcQ==",
-      "type": "package",
-      "path": "oxyplot.wpf/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "OxyPlot_128.png",
-        "lib/net45/OxyPlot.Wpf.dll",
-        "lib/net45/OxyPlot.Wpf.xml",
-        "lib/netcoreapp3.0/OxyPlot.Wpf.dll",
-        "lib/netcoreapp3.0/OxyPlot.Wpf.xml",
-        "oxyplot.wpf.2.0.0.nupkg.sha512",
-        "oxyplot.wpf.nuspec"
-      ]
-    },
     "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
       "sha512": "UqBiEXh2YmYdJE5BpJC9c1I+AzcmFlzZ1h7fn5iU2lhOLn3snSxqf46/2XHpoJetJBN4HAavqG77wzaBi5jxfQ==",
       "type": "package",
@@ -505,9 +465,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "IronXL.Excel >= 2019.5.2",
       "Microsoft.VCRTForwarders.140 >= 1.0.2-rc",
-      "OxyPlot.Core >= 2.0.0",
-      "OxyPlot.Wpf >= 2.0.0",
       "System.Windows.Controls.DataVisualization.Toolkit >= 4.0.0"
     ]
   },
@@ -549,17 +508,13 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "IronXL.Excel": {
+            "target": "Package",
+            "version": "[2019.5.2, )"
+          },
           "Microsoft.VCRTForwarders.140": {
             "target": "Package",
             "version": "[1.0.2-rc, )"
-          },
-          "OxyPlot.Core": {
-            "target": "Package",
-            "version": "[2.0.0, )"
-          },
-          "OxyPlot.Wpf": {
-            "target": "Package",
-            "version": "[2.0.0, )"
           },
           "System.Windows.Controls.DataVisualization.Toolkit": {
             "target": "Package",

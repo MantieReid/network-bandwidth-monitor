@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "75fuPjxNNAF5yxyhNRvZelrtu2Hnz2C1NQBQvWZlJdE3RIS/NWV8+Je7DRzqL8e5LL1JlxaCTWDEc+Z08HuNmA==",
+  "dgSpecHash": "cBUnRgcuEv5Ip4zvqDIjOYyHryT6pUwfeBPI6uLjFD+HaDzc1n6m4I1fx3UkDhUDqq1VKDTtpDlefTMRoWsOoA==",
   "success": true,
   "projectFilePath": "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gunzs\\.nuget\\packages\\ironxl.excel\\2019.5.2\\ironxl.excel.2019.5.2.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.vcrtforwarders.140\\1.0.2-rc\\microsoft.vcrtforwarders.140.1.0.2-rc.nupkg.sha512",
-    "C:\\Users\\gunzs\\.nuget\\packages\\oxyplot.core\\2.0.0\\oxyplot.core.2.0.0.nupkg.sha512",
-    "C:\\Users\\gunzs\\.nuget\\packages\\oxyplot.wpf\\2.0.0\\oxyplot.wpf.2.0.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\system.windows.controls.datavisualization.toolkit\\4.0.0\\system.windows.controls.datavisualization.toolkit.4.0.0.nupkg.sha512"
   ],
   "logs": []

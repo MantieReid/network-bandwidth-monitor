@@ -9,10 +9,6 @@
   
 
   <Grid>
-    <oxy:Plot Title="{Binding Title}" Background="{x:Null}">
-      <oxy:Plot.Series>
-        <oxy:LineSeries ItemsSource="{Binding Points}"/>
-      </oxy:Plot.Series>
-    </oxy:Plot>
+   
   </Grid>
 </Window>
