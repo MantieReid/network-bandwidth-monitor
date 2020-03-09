@@ -97,7 +97,11 @@ xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;asse
 
     </TabItem>
     <TabItem Header="Chart">
-      
+      <!-- Create a datagrid here. -->
+      <Grid Background="#FF2E8AFF" Height="Auto" Width="Auto">
+
+        <DataGrid Name="NetworkDataGrid"   HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" IsReadOnly="True" Height="Auto"  Width ="Auto" MinHeight="250" SelectionChanged="NetworkDataGrid_SelectionChanged" Background="#FF2E8AFF" HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" AlternatingRowBackground="#FF2E8AFF" RowBackground="#FF046BEE" GridLinesVisibility="All" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White"/>
+      </Grid>
 
     </TabItem>
     <TabItem Header="About">

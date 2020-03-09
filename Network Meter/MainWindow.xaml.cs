@@ -42,8 +42,45 @@ namespace Network_Meter
       this.DataContext = this;
 
 
+     // users.Add(new User() { Id = 1, Name = "John Doe", Birthday = new DateTime(1971, 7, 23) });
+      //users.Add(new User() { Id = 2, Name = "Jane Doe", Birthday = new DateTime(1974, 1, 17) });
+      //users.Add(new User() { Id = 3, Name = "Sammy Doe", Birthday = new DateTime(1991, 9, 2) });
+
+      //NetworkDataGrid.ItemsSource = users;
+
 
     }
+
+
+
+
+    public class User255
+    {
+      public String DateTime { get; set; }
+
+      public string Upload { get; set; }
+
+      public string Download { get; set; }
+    }
+
+    List<User255> users22 = new List<User255>();
+
+
+
+    public void UpdateList(String givenDateAndTime, string upload, string download)
+    {
+      users22.Add(new User255() {DateTime = givenDateAndTime, Upload = "    " + upload, Download = "    " + download });
+      NetworkDataGrid.ItemsSource = users22;
+      NetworkDataGrid.Items.Refresh();
+      NetworkDataGrid.MinColumnWidth = 20;
+      NetworkDataGrid.MinRowHeight = 20;
+      NetworkDataGrid.HorizontalContentAlignment = HorizontalAlignment.Center;
+
+      NetworkDataGrid.VerticalContentAlignment = VerticalAlignment.Center;
+      NetworkDataGrid.HorizontalAlignment = HorizontalAlignment.Right;
+      
+    }
+
 
 
     //create a function here to check if the excel file exists, if it does, then generate the file. 
@@ -52,6 +89,7 @@ namespace Network_Meter
 
 
     // this function will generate the excel file
+    //do not use this
     private void GenerateExcelFile()
     {
       var excelApp = new Excel.Application();
@@ -167,6 +205,9 @@ namespace Network_Meter
 
     // Datat
 
+   
+
+
 
 
     private void GenerateExcelFileandUpdate(string upload, string Download)
@@ -179,7 +220,7 @@ namespace Network_Meter
         var excelApp = new Excel.Application();
 
         //make the object visible
-        excelApp.Visible = true;
+       // excelApp.Visible = true;
 
         //create a new empty workbook and add it to the collection returned by proprety workbooks.
         excelApp.Workbooks.Add();
@@ -200,13 +241,14 @@ namespace Network_Meter
 
         //saves the excel file
 
-        worksheet.SaveAs("/NetworkMeterReport.xlsx");
+        worksheet.SaveAs(@"NetworkMeterReport.xlsx");
+        excelApp.Quit();
       }
 
-      catch(IOException)
+      catch
       {
 
-        String path = "/NetworkMeterReport.xlsx";
+        String path = @"NetworkMeterReport.xlsx";
         var excelApp2 = new Excel.Application();
         Workbook wb;
         Worksheet ws;
@@ -223,7 +265,8 @@ namespace Network_Meter
         DateTime now = DateTime.Now;
 
 
-        ws.Cells[nInLastRow, "A"] = now; //add the Date string to the cell. 
+        // ws.Cells[nInLastRow, "A"]
+        ws.Cells[nInLastRow, "A"].Value = now;
         ws.Cells[nInLastRow, "B"] = upload; // add the upload string to the cell 
         ws.Cells[nInLastRow, "C"] = Download; // add the download string to the cell
 
@@ -370,7 +413,15 @@ namespace Network_Meter
         //gets the current date and time. 
         DateTime now  = DateTime.Now;
 
+        String BytseSentSpeedString = bytesSentSpeed.ToString();
 
+        String DownloadString = bytesReceivedSpeed.ToString();
+
+        String DateTimeString = now.ToString();
+
+        UpdateList(DateTimeString, BytseSentSpeedString, DownloadString);
+
+        //GenerateExcelFileandUpdate(BytseSentSpeedString, DownloadString);
 
         //add the current upload speed to the tuple.
 
@@ -427,7 +478,12 @@ namespace Network_Meter
     {
       //Window1 win1 = new Window1();
       //win1.Show();
-      GenerateExcelFile();
+      //GenerateExcelFile();
+    }
+
+    private void NetworkDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+
     }
   }
 

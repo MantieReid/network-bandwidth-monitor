@@ -107,9 +107,8 @@ C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Mete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Dragablz.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Dragablz.pdb
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Dragablz.xml
-C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\OxyPlot.dll
-C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\OxyPlot.Wpf.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Window1.g.cs
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Window1.baml
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.csproj.ResolveComReference.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\IronXL.dll
