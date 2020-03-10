@@ -69,15 +69,17 @@ namespace Network_Meter
 
     public void UpdateList(String givenDateAndTime, string upload, string download)
     {
-      users22.Add(new User255() {DateTime = givenDateAndTime, Upload = "    " + upload, Download = "    " + download });
+      users22.Add(new User255() {DateTime = givenDateAndTime, Upload = upload, Download = download });
       NetworkDataGrid.ItemsSource = users22;
       NetworkDataGrid.Items.Refresh();
       NetworkDataGrid.MinColumnWidth = 20;
       NetworkDataGrid.MinRowHeight = 20;
-      NetworkDataGrid.HorizontalContentAlignment = HorizontalAlignment.Center;
+    NetworkDataGrid.HorizontalContentAlignment = HorizontalAlignment.Center;
+      
 
-      NetworkDataGrid.VerticalContentAlignment = VerticalAlignment.Center;
-      NetworkDataGrid.HorizontalAlignment = HorizontalAlignment.Right;
+    NetworkDataGrid.VerticalContentAlignment = VerticalAlignment.Center;
+     NetworkDataGrid.HorizontalAlignment = HorizontalAlignment.Center;
+     
       
     }
 

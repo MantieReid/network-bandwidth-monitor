@@ -14,7 +14,6 @@ xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;asse
                       mc:Ignorable="d"
         Title="Network Meter" Height="477" Width="800" WindowTitleBrush="#FF0070FF" Background="#FF2E8AFF" NonActiveWindowTitleBrush="#FF0070FF" Foreground="White" NonActiveBorderBrush="#FF0070FF" NonActiveGlowBrush="#FF0070FF" TitleForeground="White" OpacityMask="Black">
 
-
   
 
   <TabControl  HorizontalAlignment="Left" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="Auto" Background="#FF2E8AFF">
@@ -96,11 +95,36 @@ xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;asse
 
 
     </TabItem>
+
+    
     <TabItem Header="Chart">
       <!-- Create a datagrid here. -->
+
+      
+      
       <Grid Background="#FF2E8AFF" Height="Auto" Width="Auto">
 
-        <DataGrid Name="NetworkDataGrid"   HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" IsReadOnly="True" Height="Auto"  Width ="Auto" MinHeight="250" SelectionChanged="NetworkDataGrid_SelectionChanged" Background="#FF2E8AFF" HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" AlternatingRowBackground="#FF2E8AFF" RowBackground="#FF046BEE" GridLinesVisibility="All" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White"/>
+        
+
+        <DataGrid Name="NetworkDataGrid"    AutoGenerateColumns="True"  Style="{StaticResource AzureDataGrid}"  HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" IsReadOnly="True" Height="Auto"  Width ="Auto" MinHeight="250" SelectionChanged="NetworkDataGrid_SelectionChanged" Background="#FF2E8AFF" HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" AlternatingRowBackground="#FF2E8AFF" RowBackground="#FF046BEE" GridLinesVisibility="All" HorizontalAlignment="Center" FontSize="18" Foreground="White" VerticalAlignment="Center">
+
+          <!-- Sets the content in the cells to be in the center.-->
+          <DataGrid.Resources>
+            <Style  TargetType="{x:Type DataGridCell}">
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                  <Grid Background="{TemplateBinding Background}">
+                    <ContentPresenter HorizontalAlignment="Center"  />
+                  </Grid>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+            </Style>
+
+          </DataGrid.Resources>
+
+ </DataGrid>
       </Grid>
 
     </TabItem>
