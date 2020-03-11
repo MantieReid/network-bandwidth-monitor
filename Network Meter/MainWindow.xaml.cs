@@ -18,7 +18,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using MahApps.Metro.Controls;
-using IronXL;
 
 
 using LineSeries = System.Windows.Controls.DataVisualization.Charting.LineSeries;
@@ -26,6 +25,8 @@ using LineSeries = System.Windows.Controls.DataVisualization.Charting.LineSeries
 using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
+using CsvHelper;
+using System.Globalization;
 
 namespace Network_Meter
 {
@@ -70,14 +71,22 @@ namespace Network_Meter
     public void UpdateList(String givenDateAndTime, string upload, string download)
     {
       users22.Add(new User255() {DateTime = givenDateAndTime, Upload = upload, Download = download });
+
+
       NetworkDataGrid.ItemsSource = users22;
       NetworkDataGrid.Items.Refresh();
       NetworkDataGrid.MinColumnWidth = 20;
       NetworkDataGrid.MinRowHeight = 20;
-    NetworkDataGrid.HorizontalContentAlignment = HorizontalAlignment.Center;
-      
+      NetworkDataGrid.HorizontalContentAlignment = HorizontalAlignment.Center;
 
-    NetworkDataGrid.VerticalContentAlignment = VerticalAlignment.Center;
+      using (var writer = new StreamWriter("somefile.csv"))
+      using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+      {
+        csv.WriteRecords(users22); //Uses the list to write the data to the csv sheet. 
+        writer.Flush(); //flush the writer
+      }
+
+      NetworkDataGrid.VerticalContentAlignment = VerticalAlignment.Center;
      NetworkDataGrid.HorizontalAlignment = HorizontalAlignment.Center;
      
       
@@ -305,42 +314,7 @@ namespace Network_Meter
 
 
     //dont use this. IronXl is not developed well enough yet. 
-    private void GenerateExcelFileandUpdatewhateverdonotusethis(string upload, string Download)
-    {
-      try
-      {
-        //create a new excel work book document.
-        WorkBook Dataworkbook = WorkBook.Create(ExcelFileFormat.XLSX);
-
-        Dataworkbook.Metadata.Author = "Network bandwidth meter";
-
-        //add a blank sheet
-       WorkSheet HourlySheet = Dataworkbook.CreateWorkSheet("Upload and download");
-
-        //Add data to the worksheet.
-        HourlySheet["A1"].Value = "DateTime";
-        HourlySheet["B1"].Value = "Upload";
-        HourlySheet["C1"].Value = "Download";
-        //HourlySheet.range
-
-        //save the excel file.
-        Dataworkbook.SaveAs("NetworkMeterData.xlsx");
-
-
-     
-       
-
-      }
-
-      catch(IOException) // mostly likekly because the file already exists, or maybe it cant access it. Which is due to the user having the file open. 
-      {
-        var exists = File.Exists("/NetworkMeterData.xlsx"); // check if the file exists.
-
-
-
-      }
-    }
-
+   
 
     private void UpdateNetworkInterface()
     {
@@ -389,10 +363,10 @@ namespace Network_Meter
 
 
 
-        long SpeedAmountBytes = (long)(nic.Speed / 1024);
-        String SpeedAmountBytesToString = SpeedAmountBytes.ToString("N0") + "KB/s";
+        long SpeedAmountBytes = (long)(nic.Speed / 1024f);
+        String SpeedAmountBytesToString = SpeedAmountBytes.ToString("N0") + " MB/s";
 
-        SpeedAmountLabel.Content = nic.Speed.ToString();
+        SpeedAmountLabel.Content = SpeedAmountBytesToString;
 
 
 
@@ -403,7 +377,7 @@ namespace Network_Meter
 
         //Bytes_Received_amount_Textblock.Text = interfaceStats.BytesReceived.ToString("N0");
 
-       // Bytes_Sent_amount.Text = interfaceStats.BytesSent.ToString("N0");
+        // Bytes_Sent_amount.Text = interfaceStats.BytesSent.ToString("N0");
 
         UploadAmountLabel.Content = bytesSentSpeed.ToString() + " KB/s";
 

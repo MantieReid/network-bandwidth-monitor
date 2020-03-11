@@ -38,9 +38,9 @@
       "frameworks": {
         "net472": {
           "dependencies": {
-            "IronXL.Excel": {
+            "CsvHelper": {
               "target": "Package",
-              "version": "[2019.5.2, )"
+              "version": "[15.0.1, )"
             },
             "Microsoft.VCRTForwarders.140": {
               "target": "Package",

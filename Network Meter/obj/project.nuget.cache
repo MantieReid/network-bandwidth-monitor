@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "cBUnRgcuEv5Ip4zvqDIjOYyHryT6pUwfeBPI6uLjFD+HaDzc1n6m4I1fx3UkDhUDqq1VKDTtpDlefTMRoWsOoA==",
+  "dgSpecHash": "FWkA57PlbKG5um/XOzt2IY6xLg9idN8psbOKlSMAa4TWZc0U2jvKa2oJWt6wjz5XBR0kcsbUQlSx6j0g582mIg==",
   "success": true,
   "projectFilePath": "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gunzs\\.nuget\\packages\\ironxl.excel\\2019.5.2\\ironxl.excel.2019.5.2.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\csvhelper\\15.0.1\\csvhelper.15.0.1.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.vcrtforwarders.140\\1.0.2-rc\\microsoft.vcrtforwarders.140.1.0.2-rc.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\system.windows.controls.datavisualization.toolkit\\4.0.0\\system.windows.controls.datavisualization.toolkit.4.0.0.nupkg.sha512"
   ],
   "logs": []
