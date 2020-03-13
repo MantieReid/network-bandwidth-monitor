@@ -90,49 +90,6 @@ namespace Network_Meter
      NetworkDataGrid.HorizontalAlignment = HorizontalAlignment.Center;
 
 
-      Microsoft.Office.Interop.Excel.Application xlexcel;
-      Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
-
-      object misValue = System.Reflection.Missing.Value;
-      xlexcel = new Excel.Application();
-
-      var xlWorkBooks = xlexcel.Workbooks;
-
-      xlexcel.Visible = true;
-      Console.WriteLine(Directory.GetCurrentDirectory());
-
-      //Console.Directory.GetCurrentDirectory
-
-      var path = Path.Combine(Directory.GetCurrentDirectory(), "\\somefile.csv");
-
-      xlWorkBooks.OpenText(path, misValue, misValue, Excel.XlTextParsingType.xlDelimited,
-                           Excel.XlTextQualifier.xlTextQualifierNone, misValue, misValue,
-                           misValue, misValue, misValue, misValue, misValue, misValue, misValue,
-                           misValue, misValue, misValue, misValue);
-
-      // Set Sheet 1 as the sheet you want to work with
-      xlWorkSheet = (Excel.Worksheet)xlWorkBooks[1].Worksheets.get_Item(1);
-
-      xlWorkSheet.Shapes.AddChart(misValue, misValue, misValue, misValue, misValue).Select();
-
-      //~~> Make it a Line Chart
-      xlexcel.ActiveChart.ApplyCustomType(Excel.XlChartType.xlLineMarkers);
-
-      //~~> Set the data range
-      xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$A$1:$B$6"]);
-
-      //uncomment this if required
-      //xlWorkBooks[1].Close(true, misValue, misValue);
-      //xlexcel.Quit();
-
-      //releaseObject(xlWorkSheet);
-      //releaseObject(xlWorkBook);
-      //releaseObject(xlexcel);
-    }
-
-
-
-
 
 
 
@@ -501,6 +458,79 @@ namespace Network_Meter
       //Window1 win1 = new Window1();
       //win1.Show();
       //GenerateExcelFile();
+      NetworkDataGrid.VerticalContentAlignment = VerticalAlignment.Center;
+      NetworkDataGrid.HorizontalAlignment = HorizontalAlignment.Center;
+
+
+      Microsoft.Office.Interop.Excel.Application xlexcel;
+      Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+
+      object misValue = System.Reflection.Missing.Value;
+      xlexcel = new Excel.Application();
+
+      var xlWorkBooks = xlexcel.Workbooks;
+
+      xlexcel.Visible = true;
+      Console.WriteLine(Directory.GetCurrentDirectory());
+
+      //Console.Directory.GetCurrentDirectory
+
+
+      string sourceDir = @"current";
+      string backupDir = @"c:\archives\2008";
+
+      // Use the Path.Combine method to safely append the file name to the path.
+      // Will overwrite if the destination file already exists.
+
+      xlexcel.Quit();
+
+
+      //copies the file to a diffrent place 
+      File.Copy(@"somefile.csv", @"SomeReport.csv",true);
+
+
+      //shows message in the case of user having the report open. 
+      MessageBox.Show("You have the file somereport.csv still open, please close it. A new report cannot be generated if file is still open.");
+
+
+     // File.Copy(System.IO.Path.Combine(sourceDir, fName), System.IO.Path.Combine(backupDir, fName), true);
+
+
+
+      var path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), @"somereport.csv");
+
+
+
+      //ok it worked, Just need to get it to 
+     xlWorkBooks.OpenText(path, misValue, misValue, Excel.XlTextParsingType.xlDelimited,
+         Excel.XlTextQualifier.xlTextQualifierNone, misValue, misValue,
+       misValue, misValue, misValue, misValue, misValue, misValue, misValue,
+         misValue, misValue, misValue, misValue);
+
+      // Set Sheet 1 as the sheet you want to work with
+      xlWorkSheet = (Excel.Worksheet)xlWorkBooks[1].Worksheets.get_Item(1);
+
+
+      xlWorkSheet.Shapes.AddChart(misValue, misValue, misValue, misValue, misValue).Select();
+
+      //~~> Make it a Line Chart
+      xlexcel.ActiveChart.ApplyCustomType(Excel.XlChartType.xlLineMarkers);
+
+      //~~> Set the data range
+      xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$A$1:$B$6"]);
+
+      //uncomment this if required
+      //xlWorkBooks[1].Close(true, misValue, misValue);
+      //xlexcel.Quit();
+
+      //releaseObject(xlWorkSheet);
+      //releaseObject(xlWorkBook);
+      //releaseObject(xlexcel);
+
+
+
+
+
     }
 
     private void NetworkDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

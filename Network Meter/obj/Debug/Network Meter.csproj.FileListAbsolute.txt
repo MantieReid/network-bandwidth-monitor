@@ -111,7 +111,6 @@ C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Mete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Window1.baml
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\System.Windows.Controls.DataVisualization.Toolkit.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Debug\Network Meter.csproj.ResolveComReference.cache
-C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\IronXL.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\CsvHelper.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
