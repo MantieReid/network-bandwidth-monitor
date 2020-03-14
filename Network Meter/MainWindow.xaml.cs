@@ -483,21 +483,32 @@ namespace Network_Meter
       // Will overwrite if the destination file already exists.
 
       xlexcel.Quit();
+      File.Copy(@"somefile.csv", @"SomeReport22.csv", true);
+
+      //try
+      //{
+      //    //copies the file to a diffrent place 
+      //    File.Copy(@"somefile.csv", @"SomeReport.csv",true);
+
+      //}
+     
+      //catch(System.IO.IOException)
+      //{
+      //  //shows message in the case of user having the report open. 
+      //  MessageBox.Show("You have the file somereport.csv still open, please close it. A new report cannot be generated if file is still open.");
+      //  File.Copy(@"somefile.csv", @"SomeReport.csv", true);
 
 
-      //copies the file to a diffrent place 
-      File.Copy(@"somefile.csv", @"SomeReport.csv",true);
-
-
+      //}
       //shows message in the case of user having the report open. 
-      MessageBox.Show("You have the file somereport.csv still open, please close it. A new report cannot be generated if file is still open.");
+      // MessageBox.Show("You have the file somereport.csv still open, please close it. A new report cannot be generated if file is still open.");
 
 
-     // File.Copy(System.IO.Path.Combine(sourceDir, fName), System.IO.Path.Combine(backupDir, fName), true);
+      // File.Copy(System.IO.Path.Combine(sourceDir, fName), System.IO.Path.Combine(backupDir, fName), true);
 
 
 
-      var path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), @"somereport.csv");
+      var path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), @"somereport22.csv");
 
 
 
