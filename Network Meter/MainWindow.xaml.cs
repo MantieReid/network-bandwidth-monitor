@@ -147,7 +147,7 @@ namespace Network_Meter
     /// <summary>
     /// Timer Update (every 1 sec)
     /// </summary>
-    private const double timerUpdate = 1000;
+    private const double timerUpdate = 10000;
 
 
     /// <summary>
@@ -390,13 +390,13 @@ namespace Network_Meter
 
 
         //gets the current date and time. 
-        DateTime now  = DateTime.Now;
+        DateTime now = DateTime.Now;
 
         String BytseSentSpeedString = bytesSentSpeed.ToString();
 
         String DownloadString = bytesReceivedSpeed.ToString();
 
-        String DateTimeString = now.ToString();
+        String DateTimeString = now.ToString("hh:mm");
 
         UpdateList(DateTimeString, BytseSentSpeedString, DownloadString);
 
@@ -455,9 +455,7 @@ namespace Network_Meter
 
     private void Open_Window_1_Click(object sender, RoutedEventArgs e)
     {
-      //Window1 win1 = new Window1();
-      //win1.Show();
-      //GenerateExcelFile();
+   
       NetworkDataGrid.VerticalContentAlignment = VerticalAlignment.Center;
       NetworkDataGrid.HorizontalAlignment = HorizontalAlignment.Center;
 
@@ -468,6 +466,11 @@ namespace Network_Meter
       object misValue = System.Reflection.Missing.Value;
       xlexcel = new Excel.Application();
 
+
+
+      // Excel.Range all = xlexcel.get_Range
+
+
       var xlWorkBooks = xlexcel.Workbooks;
 
       xlexcel.Visible = true;
@@ -476,44 +479,21 @@ namespace Network_Meter
       //Console.Directory.GetCurrentDirectory
 
 
+
       string sourceDir = @"current";
       string backupDir = @"c:\archives\2008";
 
-      // Use the Path.Combine method to safely append the file name to the path.
-      // Will overwrite if the destination file already exists.
-
-      xlexcel.Quit();
+      //xlexcel.Quit();
       File.Copy(@"somefile.csv", @"SomeReport22.csv", true);
 
-      //try
-      //{
-      //    //copies the file to a diffrent place 
-      //    File.Copy(@"somefile.csv", @"SomeReport.csv",true);
-
-      //}
-     
-      //catch(System.IO.IOException)
-      //{
-      //  //shows message in the case of user having the report open. 
-      //  MessageBox.Show("You have the file somereport.csv still open, please close it. A new report cannot be generated if file is still open.");
-      //  File.Copy(@"somefile.csv", @"SomeReport.csv", true);
-
-
-      //}
-      //shows message in the case of user having the report open. 
-      // MessageBox.Show("You have the file somereport.csv still open, please close it. A new report cannot be generated if file is still open.");
-
-
-      // File.Copy(System.IO.Path.Combine(sourceDir, fName), System.IO.Path.Combine(backupDir, fName), true);
-
-
+ 
 
       var path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), @"somereport22.csv");
 
 
 
       //ok it worked, Just need to get it to 
-     xlWorkBooks.OpenText(path, misValue, misValue, Excel.XlTextParsingType.xlDelimited,
+      xlWorkBooks.OpenText(path, misValue, misValue, Excel.XlTextParsingType.xlDelimited,
          Excel.XlTextQualifier.xlTextQualifierNone, misValue, misValue,
        misValue, misValue, misValue, misValue, misValue, misValue, misValue,
          misValue, misValue, misValue, misValue);
@@ -522,21 +502,57 @@ namespace Network_Meter
       xlWorkSheet = (Excel.Worksheet)xlWorkBooks[1].Worksheets.get_Item(1);
 
 
+      //Excel.Range last = xlWorkSheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell, Type.Missing);
+      //Excel.Range range = xlWorkSheet.get_Range("A1", last);
+
+     // int lastUsedRow = last.Row;
+     // int lastUsedColumn = last.Column;
+
+
       xlWorkSheet.Shapes.AddChart(misValue, misValue, misValue, misValue, misValue).Select();
+
+
+
+      var usedrange = xlWorkSheet.UsedRange;
+
+      usedrange.RemoveDuplicates(1); // gets rid of the duplocat
+      xlWorkSheet.Rows[2].Delete(); //gets rid of the row that is has upload and download speed that throws the entire chart off. 
+
+      int nInLastRow = xlWorkSheet.Cells.Find("*", System.Reflection.Missing.Value,
+System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
+
+      int nInLastCol = xlWorkSheet.Cells.Find("*", System.Reflection.Missing.Value, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByColumns, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Column;
+      System.Console.WriteLine(nInLastCol);
+      System.Console.WriteLine(nInLastRow);
+
+      String lastrownumber = nInLastRow.ToString();
+      string DesriredRange = "$A${0}:$C${0}";
+
+      string RangeCombinedWithRowNumber = string.Format(DesriredRange, lastrownumber);
+
 
       //~~> Make it a Line Chart
       xlexcel.ActiveChart.ApplyCustomType(Excel.XlChartType.xlLineMarkers);
 
+
       //~~> Set the data range
-      xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$A$1:$B$6"]);
+      xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$A$1:$C$1",RangeCombinedWithRowNumber]);
+      
+      //WorkBooks.
+
+      
+      //xlWorkSheet.SaveAs("somereportChart.xlsx");
+      xlWorkBooks[1].SaveAs("SomeReportChart", Excel.XlFileFormat.xlWorkbookNormal);
+    
+
 
       //uncomment this if required
-      //xlWorkBooks[1].Close(true, misValue, misValue);
-      //xlexcel.Quit();
+      xlWorkBooks[1].Close(true, misValue, misValue);
+      xlexcel.Quit();
 
-      //releaseObject(xlWorkSheet);
-      //releaseObject(xlWorkBook);
-      //releaseObject(xlexcel);
+      releaseObject(xlWorkSheet);
+      releaseObject(xlWorkBooks);
+      releaseObject(xlexcel);
 
 
 
@@ -544,6 +560,25 @@ namespace Network_Meter
 
     }
 
+
+
+    private void releaseObject(object obj)
+    {
+      try
+      {
+        System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+        obj = null;
+      }
+      catch (Exception ex)
+      {
+        obj = null;
+        MessageBox.Show("Unable to release the Object " + ex.ToString());
+      }
+      finally
+      {
+        GC.Collect();
+      }
+    }
     private void NetworkDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
 
