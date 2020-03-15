@@ -38,6 +38,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "Costura.Fody": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "CsvHelper": {
               "target": "Package",
               "version": "[15.0.1, )"
@@ -46,9 +50,9 @@
               "target": "Package",
               "version": "[1.0.2-rc, )"
             },
-            "System.Windows.Controls.DataVisualization.Toolkit": {
+            "ilmerge": {
               "target": "Package",
-              "version": "[4.0.0, )"
+              "version": "[3.0.29, )"
             }
           },
           "imports": [

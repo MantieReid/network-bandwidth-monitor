@@ -2,8 +2,6 @@ C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Mete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\Network Meter.exe
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\Network Meter.pdb
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\Microsoft.Toolkit.Win32.UI.XamlHost.xml
-C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\OxyPlot.dll
-C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\OxyPlot.Wpf.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\ControlzEx.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\Dragablz.dll
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\LiveCharts.dll
@@ -99,7 +97,6 @@ C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Mete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\MainWindow.g.cs
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\Window1.g.cs
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\App.g.cs
-C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\GeneratedInternalTypeHelper.g.cs
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\Network Meter_MarkupCompile.cache
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\Network Meter_MarkupCompile.lref
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\App.baml
@@ -112,3 +109,21 @@ C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Mete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\Network Meter.csproj.CopyComplete
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\Network Meter.exe
 C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\Network Meter.pdb
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\CsvHelper.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\Release\Network Meter.csproj.ResolveComReference.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\PresentationCore.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\PresentationFramework.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Data.DataSetExtensions.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Data.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Design.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Drawing.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Net.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Net.Http.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Xaml.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Xml.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\System.Xml.Linq.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\Release\WindowsBase.dll

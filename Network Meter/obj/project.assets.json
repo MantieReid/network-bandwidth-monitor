@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "Costura.Fody/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.0.0"
+        },
+        "compile": {
+          "lib/net40/Costura.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Costura.dll": {}
+        },
+        "build": {
+          "build/Costura.Fody.props": {}
+        }
+      },
       "CsvHelper/15.0.1": {
         "type": "package",
         "dependencies": {
@@ -14,6 +29,18 @@
         },
         "runtime": {
           "lib/net47/CsvHelper.dll": {}
+        }
+      },
+      "Fody/6.0.0": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
+      "ILMerge/3.0.29": {
+        "type": "package",
+        "build": {
+          "build/ILMerge.props": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
@@ -271,18 +298,24 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
-      },
-      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
-        },
-        "runtime": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
-        }
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "Costura.Fody/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.0.0"
+        },
+        "compile": {
+          "lib/net40/Costura.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Costura.dll": {}
+        },
+        "build": {
+          "build/Costura.Fody.props": {}
+        }
+      },
       "CsvHelper/15.0.1": {
         "type": "package",
         "dependencies": {
@@ -295,6 +328,18 @@
         },
         "runtime": {
           "lib/net47/CsvHelper.dll": {}
+        }
+      },
+      "Fody/6.0.0": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
+      "ILMerge/3.0.29": {
+        "type": "package",
+        "build": {
+          "build/ILMerge.props": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
@@ -349,19 +394,25 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
-        }
-      },
-      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
-        },
-        "runtime": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "Costura.Fody/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.0.0"
+        },
+        "compile": {
+          "lib/net40/Costura.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Costura.dll": {}
+        },
+        "build": {
+          "build/Costura.Fody.props": {}
+        }
+      },
       "CsvHelper/15.0.1": {
         "type": "package",
         "dependencies": {
@@ -374,6 +425,18 @@
         },
         "runtime": {
           "lib/net47/CsvHelper.dll": {}
+        }
+      },
+      "Fody/6.0.0": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
+      "ILMerge/3.0.29": {
+        "type": "package",
+        "build": {
+          "build/ILMerge.props": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
@@ -428,19 +491,25 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
-        }
-      },
-      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
-        },
-        "runtime": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "Costura.Fody/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.0.0"
+        },
+        "compile": {
+          "lib/net40/Costura.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Costura.dll": {}
+        },
+        "build": {
+          "build/Costura.Fody.props": {}
+        }
+      },
       "CsvHelper/15.0.1": {
         "type": "package",
         "dependencies": {
@@ -453,6 +522,18 @@
         },
         "runtime": {
           "lib/net47/CsvHelper.dll": {}
+        }
+      },
+      "Fody/6.0.0": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
+      "ILMerge/3.0.29": {
+        "type": "package",
+        "build": {
+          "build/ILMerge.props": {}
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
@@ -507,20 +588,27 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
-        }
-      },
-      "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
-        },
-        "runtime": {
-          "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "Costura.Fody/4.1.0": {
+      "sha512": "MkW5aqhqNvuP6MiaaD5Yx8efXv+5ucsumRx+Nsn5b+PA4RnaxJLtXhGkm1N+Hi7sjkSlL8kl1klSS/7v2DxZHw==",
+      "type": "package",
+      "path": "costura.fody/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Costura.Fody.props",
+        "costura.fody.4.1.0.nupkg.sha512",
+        "costura.fody.nuspec",
+        "lib/net40/Costura.dll",
+        "lib/net40/Costura.xml",
+        "weaver/Costura.Fody.dll",
+        "weaver/Costura.Fody.xcf"
+      ]
+    },
     "CsvHelper/15.0.1": {
       "sha512": "cp8HCY1PWddLy8tllAOv7T8We67fg/7B40JiBaTLM252FQDVA0XvrmfVeqHDJBGbnXwyakpnAd8F2ELDZb8ZxQ==",
       "type": "package",
@@ -539,6 +627,54 @@
         "lib/netstandard2.0/CsvHelper.xml",
         "lib/netstandard2.1/CsvHelper.dll",
         "lib/netstandard2.1/CsvHelper.xml"
+      ]
+    },
+    "Fody/6.0.0": {
+      "sha512": "rH9Q7GapghyLYESfeCUOqh0S70eLc3FAikIgEEyGeng3JJf1M7mt2BUxjz93o3ipDXLrKn1s69AIEolmnVn8xg==",
+      "type": "package",
+      "path": "fody/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Fody.targets",
+        "fody.6.0.0.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb"
+      ]
+    },
+    "ILMerge/3.0.29": {
+      "sha512": "+LXIFY4L84Ve3cVgmd8tOEwFCppJynP0gY2cTmyj/8XjFaQPqaiN6jdYOrIJwtzYw3ayf69IY5vor6XXRxoigA==",
+      "type": "package",
+      "path": "ilmerge/3.0.29",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/ILMerge.props",
+        "docs/ilmerge-manual.md",
+        "ilmerge.3.0.29.nupkg.sha512",
+        "ilmerge.nuspec",
+        "tools/net452/ILMerge.exe",
+        "tools/net452/System.Compiler.dll"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
@@ -776,26 +912,14 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "System.Windows.Controls.DataVisualization.Toolkit/4.0.0": {
-      "sha512": "UqBiEXh2YmYdJE5BpJC9c1I+AzcmFlzZ1h7fn5iU2lhOLn3snSxqf46/2XHpoJetJBN4HAavqG77wzaBi5jxfQ==",
-      "type": "package",
-      "path": "system.windows.controls.datavisualization.toolkit/4.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.XML",
-        "lib/net40-Client/System.Windows.Controls.DataVisualization.Toolkit.dll",
-        "system.windows.controls.datavisualization.toolkit.4.0.0.nupkg.sha512",
-        "system.windows.controls.datavisualization.toolkit.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "Costura.Fody >= 4.1.0",
       "CsvHelper >= 15.0.1",
       "Microsoft.VCRTForwarders.140 >= 1.0.2-rc",
-      "System.Windows.Controls.DataVisualization.Toolkit >= 4.0.0"
+      "ilmerge >= 3.0.29"
     ]
   },
   "packageFolders": {
@@ -836,6 +960,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "Costura.Fody": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
           "CsvHelper": {
             "target": "Package",
             "version": "[15.0.1, )"
@@ -844,9 +972,9 @@
             "target": "Package",
             "version": "[1.0.2-rc, )"
           },
-          "System.Windows.Controls.DataVisualization.Toolkit": {
+          "ilmerge": {
             "target": "Package",
-            "version": "[4.0.0, )"
+            "version": "[3.0.29, )"
           }
         },
         "imports": [

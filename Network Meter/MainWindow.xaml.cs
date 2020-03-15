@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.DataVisualization.Charting;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -20,7 +19,6 @@ using System.Windows.Threading;
 using MahApps.Metro.Controls;
 
 
-using LineSeries = System.Windows.Controls.DataVisualization.Charting.LineSeries;
 
 using Microsoft.Office.Interop.Excel;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -326,7 +324,9 @@ namespace Network_Meter
         // Grab NetworkInterface object that describes the current interface
         NetworkInterface nic = nicArr[ComboBox_Network_interface.SelectedIndex];
 
-        
+
+
+        //TODO: Hurry up and get all the stupid DLL files shoved into the EXE file. 
 
         IPInterfaceProperties properties = nic.GetIPProperties();
         Object test = nic.Speed;
@@ -337,6 +337,12 @@ namespace Network_Meter
 
         //takes the bytes sent from the interface and put it in the text for the bytes sent amount text of the text block.
 
+
+
+
+        //TODO: Convert the download speed to Megabits. This can be done by converting the bytes to Kilobytes, then change it to megabits.
+
+        //TODO: Convert the upload speed to Megabits.  https://i.imgur.com/PnGvOFG.png
         String BytesSentAmountCastContent2;
         BytesSentAmountCastContent2 = (String)BytesSentAmountLabel.Content;
 
@@ -364,7 +370,7 @@ namespace Network_Meter
 
         // Update the labels
 
-
+        //TODO:Correct the Nic speed being converted into Kilobytes. It needs to be converted from BITS, not BYTES. 
 
         long SpeedAmountBytes = (long)(nic.Speed / 1024f);
         String SpeedAmountBytesToString = SpeedAmountBytes.ToString("N0") + " MB/s";

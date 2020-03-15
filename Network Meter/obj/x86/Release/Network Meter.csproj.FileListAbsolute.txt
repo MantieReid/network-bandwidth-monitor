@@ -1,0 +1,61 @@
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Network Meter.exe.config
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Network Meter.exe
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Network Meter.pdb
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\concrt140_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\msvcp140_1_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\msvcp140_2_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\msvcp140_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\vcamp140_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\vccorlib140_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\vcomp140_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\vcruntime140_app.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Microsoft.Toolkit.Win32.UI.XamlHost.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Microsoft.Toolkit.Win32.UI.XamlHost.dll
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Microsoft.Toolkit.Win32.UI.XamlHost.pri
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Microsoft.Toolkit.Win32.UI.XamlHost.winmd
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Dragablz.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\LiveCharts.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\LiveCharts.Wpf.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.BoxIcons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Core.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Entypo.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.EvaIcons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.FeatherIcons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.FontAwesome.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Ionicons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.JamIcons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Material.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.MaterialDesign.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.MaterialLight.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Microns.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Modern.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Octicons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.PicolIcons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.RPGAwesome.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.SimpleIcons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Typicons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Unicons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.WeatherIcons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\MahApps.Metro.IconPacks.Zondicons.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Microsoft.Toolkit.Win32.UI.XamlHost.Managed.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Microsoft.Toolkit.Wpf.UI.Controls.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\bin\x86\Release\Microsoft.Toolkit.Wpf.UI.XamlHost.xml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.csproj.ResolveComReference.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\MainWindow.g.cs
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Window1.g.cs
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\App.g.cs
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter_MarkupCompile.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter_MarkupCompile.lref
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\App.baml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\MainWindow.baml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Window1.baml
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.g.resources
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network_Meter.Properties.Resources.resources
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.csproj.GenerateResource.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.csproj.CoreCompileInputs.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.csproj.Fody.CopyLocal.cache
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.csproj.CopyComplete
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.exe
+C:\Users\gunzs\Desktop\github\GITHUBREPOS\network-bandwidth-monitor\Network Meter\obj\x86\Release\Network Meter.pdb
