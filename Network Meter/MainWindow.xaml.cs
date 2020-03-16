@@ -209,7 +209,6 @@ namespace Network_Meter
 
     }
 
-    //TODO:later on have the results of upload and downloaded added to a dictionary.The Key will be the date and time.  Datetime: current date and time.  Upload: upload amount. Download: download amount. 
 
 
     Dictionary<String, Object> DataDictionary = new Dictionary<String, Object>();
@@ -326,7 +325,6 @@ namespace Network_Meter
 
 
 
-        //TODO: Hurry up and get all the stupid DLL files shoved into the EXE file. 
 
         IPInterfaceProperties properties = nic.GetIPProperties();
         Object test = nic.Speed;
@@ -342,16 +340,16 @@ namespace Network_Meter
 
         //TODO: Convert the download speed to Megabits. This can be done by converting the bytes to Kilobytes, then change it to megabits.
 
-        //TODO: Convert the upload speed to Megabits.  https://i.imgur.com/PnGvOFG.png
+        //TODO: Convert the upload speed to Megabits.   This can be done by converting the bytes to Kilobytes, then change it to megabits.
         String BytesSentAmountCastContent2;
         BytesSentAmountCastContent2 = (String)BytesSentAmountLabel.Content;
 
        
 
 
-        long bytesSentSpeed = (long)(interfaceStats.BytesSent - double.Parse(BytesSentAmountCastContent2))  / 1024; //converts the bytes to a Kikibyte(KB).
+        long bytesSentSpeed = (long)(interfaceStats.BytesSent - double.Parse(BytesSentAmountCastContent2))  / 1000; //converts the bytes to a KiloBytes(kB).
 
-
+        long SentSpeedToMegaBytes = bytesSentSpeed / 1000; // converts the sentspeed from kilobytes(KB) to MegaBytes(MB)
         // String BytesSentSpeedToDouble = Convert.ToDouble(by)
         //long whatever = ByteSentSpeedToObject - (bytesSentSpeed / 1024);
         BytesSentAmountLabel.Content = interfaceStats.BytesSent.ToString("N0"); // sets the label text to be equal to the bytes sent speed.
@@ -418,7 +416,6 @@ namespace Network_Meter
 
 
 
-        //TODO: Create a function here that will add the new upload value to the excel sheet. Updates it. 
 
         // get the IP address of the current selected network interface. 
         UnicastIPAddressInformationCollection ipInfo = nic.GetIPProperties().UnicastAddresses;
