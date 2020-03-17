@@ -338,9 +338,7 @@ namespace Network_Meter
 
 
 
-        //TODO: Convert the download speed to Megabits. This can be done by converting the bytes to Kilobytes, then change it to megabits.
 
-        //TODO: Convert the upload speed to Megabits.   This can be done by converting the bytes to Kilobytes, then change it to megabits.
         String BytesSentAmountCastContent2;
         BytesSentAmountCastContent2 = (String)BytesSentAmountLabel.Content;
 
@@ -368,7 +366,6 @@ namespace Network_Meter
 
         // Update the labels
 
-        //TODO:Correct the Nic speed being converted into Kilobytes. It needs to be converted from BITS, not BYTES. 
 
         long SpeedAmountBytes = (long)(nic.Speed / 8000);
         String SpeedAmountBytesToString = SpeedAmountBytes.ToString("N0") + " KB/s";
@@ -377,7 +374,7 @@ namespace Network_Meter
 
 
 
-
+        //TODO: Add a total amount for the upload and download. Make seprate col for it. 
 
 
 
