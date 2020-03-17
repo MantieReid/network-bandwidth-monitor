@@ -360,7 +360,7 @@ namespace Network_Meter
         BytesReceivedAmountCast = (String)BytesReceivedAmountLabel.Content;
 
         //takes the bytes received from the interface and put it in the text for the bytes received amount text of the text block.
-        long bytesReceivedSpeed = (long)(interfaceStats.BytesReceived - double.Parse(BytesReceivedAmountCast)) / 1024;
+        long bytesReceivedSpeed = (long)(interfaceStats.BytesReceived - double.Parse(BytesReceivedAmountCast)) / 1000;
         //String ByteRecievedToString = bytesReceivedSpeed.ToString("N0") + " KB/s";  // converts it to a string with commas separating it.
 
 
@@ -370,8 +370,8 @@ namespace Network_Meter
 
         //TODO:Correct the Nic speed being converted into Kilobytes. It needs to be converted from BITS, not BYTES. 
 
-        long SpeedAmountBytes = (long)(nic.Speed / 1024f);
-        String SpeedAmountBytesToString = SpeedAmountBytes.ToString("N0") + " MB/s";
+        long SpeedAmountBytes = (long)(nic.Speed / 8000);
+        String SpeedAmountBytesToString = SpeedAmountBytes.ToString("N0") + " KB/s";
 
         SpeedAmountLabel.Content = SpeedAmountBytesToString;
 
@@ -514,20 +514,20 @@ namespace Network_Meter
 
       xlWorkSheet.Shapes.AddChart(misValue, misValue, misValue, misValue, misValue).Select();
 
-
+      
 
       var usedrange = xlWorkSheet.UsedRange;
 
-      usedrange.RemoveDuplicates(1); // gets rid of the duplocat
+      //usedrange.RemoveDuplicates(1); // gets rid of the duplicates
+
+
       xlWorkSheet.Rows[2].Delete(); //gets rid of the row that is has upload and download speed that throws the entire chart off. 
 
       int nInLastRow = xlWorkSheet.Cells.Find("*", System.Reflection.Missing.Value,
 System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
 
       int nInLastCol = xlWorkSheet.Cells.Find("*", System.Reflection.Missing.Value, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByColumns, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Column;
-      System.Console.WriteLine(nInLastCol);
-      System.Console.WriteLine(nInLastRow);
-
+     
       String lastrownumber = nInLastRow.ToString();
       string DesriredRange = "$A${0}:$C${0}";
 
