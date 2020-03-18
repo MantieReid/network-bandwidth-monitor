@@ -256,6 +256,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="ClosedXML">
+      <Version>0.94.2</Version>
+    </PackageReference>
     <PackageReference Include="Costura.Fody">
       <Version>4.1.0</Version>
     </PackageReference>

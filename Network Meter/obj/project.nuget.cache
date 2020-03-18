@@ -1,16 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "ng7fiRZH+4q0ZOMz981iTK5DYFhT7qqTGzIRbSwWkk3Pvy7RBHsFcT+a/1tmRaPrT5w3LxMZpyNWwQoAUZGkVw==",
+  "dgSpecHash": "FoYni5HYNC13GERTr+hdbQ53aQI9kJvC3g9hm79xKrNRP+Ne7fS1VL1nWidnuI/L0gx4Dn4vDANg0JKo+v+ovA==",
   "success": true,
   "projectFilePath": "C:\\Users\\gunzs\\Desktop\\github\\GITHUBREPOS\\network-bandwidth-monitor\\Network Meter\\Network Meter.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gunzs\\.nuget\\packages\\closedxml\\0.94.2\\closedxml.0.94.2.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\costura.fody\\4.1.0\\costura.fody.4.1.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\csvhelper\\15.0.1\\csvhelper.15.0.1.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\excelnumberformat\\1.0.3\\excelnumberformat.1.0.3.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\fastmember\\1.3.0\\fastmember.1.3.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\fody\\6.0.0\\fody.6.0.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\ilmerge\\3.0.29\\ilmerge.3.0.29.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\microsoft.vcrtforwarders.140\\1.0.2-rc\\microsoft.vcrtforwarders.140.1.0.2-rc.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\system.io.filesystem.primitives\\4.0.1\\system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\gunzs\\.nuget\\packages\\system.io.packaging\\4.0.0\\system.io.packaging.4.0.0.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\gunzs\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
   ],

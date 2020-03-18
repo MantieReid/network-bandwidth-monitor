@@ -120,6 +120,9 @@ namespace Network_Meter
       worksheet.Cells[1, "A"] = "Date";
       worksheet.Cells[1, "B"] = "Upload";
       worksheet.Cells[1, "C"] = "Download";
+      worksheet.Cells[1, "D"] = "Upload total";
+      worksheet.Cells[1, "E"] = "Download Total";
+
 
 
 
@@ -528,7 +531,12 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
       String lastrownumber = nInLastRow.ToString();
       string DesriredRange = "$A${0}:$C${0}";
 
+      string DesriredRangeforsum = "$B${0}";
+
+
       string RangeCombinedWithRowNumber = string.Format(DesriredRange, lastrownumber);
+      string RangeCombinedWithRowNumberforSum = string.Format(DesriredRangeforsum, lastrownumber);
+
 
 
       //~~> Make it a Line Chart
@@ -537,10 +545,20 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
 
       //~~> Set the data range
       xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$A$1:$C$1",RangeCombinedWithRowNumber]);
-      
+      var rangeofsum = xlexcel.Range["$B$2",RangeCombinedWithRowNumberforSum];
+      double sumresult = xlexcel.WorksheetFunction.Sum(rangeofsum);
+
+      xlWorkSheet.Cells[1, "D"] = "Upload Total";
+      xlWorkSheet.Cells[2, "D"] = sumresult;
+
+
+     // worksheet.Cells[1, "D"] = "Upload total";
+      //worksheet.Cells[1, "E"] = "Download Total";
+
+
       //WorkBooks.
 
-      
+
       //xlWorkSheet.SaveAs("somereportChart.xlsx");
       xlWorkBooks[1].SaveAs("SomeReportChart", Excel.XlFileFormat.xlWorkbookNormal);
     

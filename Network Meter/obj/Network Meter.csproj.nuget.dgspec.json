@@ -38,6 +38,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.94.2, )"
+            },
             "Costura.Fody": {
               "target": "Package",
               "version": "[4.1.0, )"
