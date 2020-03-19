@@ -516,26 +516,39 @@ namespace Network_Meter
 
       
 
+
       var usedrange = xlWorkSheet.UsedRange;
 
-      //usedrange.RemoveDuplicates(1); // gets rid of the duplicates
+      usedrange.RemoveDuplicates(1); // gets rid of the duplicates
 
 
-      xlWorkSheet.Rows[2].Delete(); //gets rid of the row that is has upload and download speed that throws the entire chart off. 
+      xlWorkSheet.Rows[2].Delete(); //gets rid of  first row that  has upload and download speed that throws the entire chart off. 
 
       int nInLastRow = xlWorkSheet.Cells.Find("*", System.Reflection.Missing.Value,
 System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Row;
 
-      int nInLastCol = xlWorkSheet.Cells.Find("*", System.Reflection.Missing.Value, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByColumns, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Column;
+      //gets the last col number that has text in it.
+      int nInLastCol = xlWorkSheet.Cells.Find("*", System.Reflection.Missing.Value, System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearchOrder.xlByColumns, Excel.XlSearchDirection.xlPrevious, false, System.Reflection.Missing.Value, System.Reflection.Missing.Value).Column; 
      
       String lastrownumber = nInLastRow.ToString();
       string DesriredRange = "$A${0}:$C${0}";
 
+      //range for the upload col
       string DesriredRangeforsum = "$B${0}";
 
+      //range for the download col.
 
+      string DesriredRangeforsum2 = "$C${0}";
+
+      //string to be used to pass the range to the chart.
       string RangeCombinedWithRowNumber = string.Format(DesriredRange, lastrownumber);
+
+     //string to be used to pass the range to  get the sum of the upload total
       string RangeCombinedWithRowNumberforSum = string.Format(DesriredRangeforsum, lastrownumber);
+
+      //string to be used to pass the range to  get the sum of the download total
+
+      string RangeCombinedWithRowNumberforSum2 = string.Format(DesriredRangeforsum2, lastrownumber);
 
 
 
@@ -546,13 +559,22 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
       //~~> Set the data range
       xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$A$1:$C$1",RangeCombinedWithRowNumber]);
       var rangeofsum = xlexcel.Range["$B$2",RangeCombinedWithRowNumberforSum];
+
+      var rangeofsum2 = xlexcel.Range["$B$2", RangeCombinedWithRowNumberforSum2];
+
       double sumresult = xlexcel.WorksheetFunction.Sum(rangeofsum);
+      double sumresult2 = xlexcel.WorksheetFunction.Sum(rangeofsum2);
+
 
       xlWorkSheet.Cells[1, "D"] = "Upload Total";
       xlWorkSheet.Cells[2, "D"] = sumresult;
 
+      xlWorkSheet.Cells[1, "E"] = "Download Total";
+      xlWorkSheet.Cells[2, "E"] = sumresult2;
 
-     // worksheet.Cells[1, "D"] = "Upload total";
+
+
+      // worksheet.Cells[1, "D"] = "Upload total";
       //worksheet.Cells[1, "E"] = "Download Total";
 
 
