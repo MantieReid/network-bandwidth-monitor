@@ -557,7 +557,7 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
 
 
       //~~> Set the data range
-      xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$A$1:$C$1",RangeCombinedWithRowNumber]);
+      xlexcel.ActiveChart.SetSourceData(xlWorkSheet.Range["$B$1:$C$1",RangeCombinedWithRowNumber]);
       var rangeofsum = xlexcel.Range["$B$2",RangeCombinedWithRowNumberforSum];
 
       var rangeofsum2 = xlexcel.Range["$B$2", RangeCombinedWithRowNumberforSum2];
