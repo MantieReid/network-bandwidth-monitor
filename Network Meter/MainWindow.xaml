@@ -95,7 +95,7 @@
     </TabItem>
 
     
-    <TabItem Header="Chart">
+    <TabItem Header="Data">
       <!-- Create a datagrid here. -->
 
       
@@ -127,6 +127,7 @@
 
     </TabItem>
     <TabItem Header="About">
+      <!--TODO: Add some info the about tab. Who Made it. Link to the source Code-->
       <Grid Background="#FFE5E5E5"/>
     </TabItem>
 

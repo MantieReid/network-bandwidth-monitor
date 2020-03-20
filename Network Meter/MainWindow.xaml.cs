@@ -102,39 +102,7 @@ namespace Network_Meter
 
     // this function will generate the excel file
     //do not use this
-    private void GenerateExcelFile()
-    {
-      var excelApp = new Excel.Application();
-
-      //make the object visible
-      excelApp.Visible = true;
-
-      //create a new empty workbook and add it to the collection returned by proprety workbooks.
-      excelApp.Workbooks.Add();
-
-      // This example uses a single workSheet. The explicit type casting is
-      // removed in a later procedure.
-      Excel._Worksheet worksheet = (Excel.Worksheet)excelApp.ActiveSheet;
-
-
-      worksheet.Cells[1, "A"] = "Date";
-      worksheet.Cells[1, "B"] = "Upload";
-      worksheet.Cells[1, "C"] = "Download";
-      worksheet.Cells[1, "D"] = "Upload total";
-      worksheet.Cells[1, "E"] = "Download Total";
-
-
-
-
-
-
-
-      //saves the excel file
-
-      worksheet.SaveAs("NetworkMeterReport.xlsx");
-
-    }
-
+  
 
 
 
@@ -148,7 +116,6 @@ namespace Network_Meter
     /// <summary>
     /// Timer Update (every 1 sec)
     /// </summary>
-    private const double timerUpdate = 10000;
 
 
     /// <summary>
@@ -156,11 +123,9 @@ namespace Network_Meter
     /// (we could use something more efficient such 
     /// as inter loop calls to HighPerformanceTimers)
     /// </summary>
-    private Timer timer;
 
     DispatcherTimer dispatcherTimer; // a new dispatcher timer variable.
 
-   // private Timer timer;
 
    // DispatcherTimer dispatcherTimer; // a new dispatcher timer variable.
 
@@ -214,10 +179,7 @@ namespace Network_Meter
 
 
 
-    Dictionary<String, Object> DataDictionary = new Dictionary<String, Object>();
-    //Tuple<String, int, Object> DataTuple;
 
-    // Datat
 
    
 
@@ -316,7 +278,6 @@ namespace Network_Meter
 
 
 
-    //dont use this. IronXl is not developed well enough yet. 
    
 
     private void UpdateNetworkInterface()
@@ -377,7 +338,6 @@ namespace Network_Meter
 
 
 
-        //TODO: Add a total amount for the upload and download. Make seprate col for it. 
 
 
 
@@ -446,15 +406,8 @@ namespace Network_Meter
 
     }
 
-    private void MenuItem_Click_Live_Chart_Open(object sender, RoutedEventArgs e)
-    {
+    
 
-    }
-
-    private void MenuItem_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
 
     private void Open_Window_1_Click(object sender, RoutedEventArgs e)
     {
@@ -619,10 +572,7 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
         GC.Collect();
       }
     }
-    private void NetworkDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-
-    }
+    
   }
 
 }
