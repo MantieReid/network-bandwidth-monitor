@@ -128,7 +128,21 @@
     </TabItem>
     <TabItem Header="About">
       <!--TODO: Add some info the about tab. Who Made it. Link to the source Code-->
-      <Grid Background="#FFE5E5E5"/>
+      <Grid Background="#FFE5E5E5">
+        <Grid.RowDefinitions>
+
+          <RowDefinition  Height="Auto"/>
+          <!-- The First Row(after Zero row) -->
+
+          <RowDefinition  Height="Auto"/>
+          
+        </Grid.RowDefinitions>
+        <Label Content="Created by Mantie Reid II" Background="#FF2E8AFF" BorderBrush="#CC0050EF" Foreground="White" > </Label>
+        <Label Grid.Row="1" Background="#FF2E8AFF" Foreground="White"   >
+          <Hyperlink NavigateUri="https://github.com/MantieReid/network-bandwidth-monitor" RequestNavigate="Hyperlink_RequestNavigate"> Source Code </Hyperlink>  </Label>
+
+      </Grid>
+      
     </TabItem>
 
   </TabControl>

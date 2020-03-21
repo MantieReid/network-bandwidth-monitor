@@ -25,6 +25,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 using System.IO;
 using CsvHelper;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace Network_Meter
 {
@@ -408,7 +409,7 @@ namespace Network_Meter
 
     
 
-
+    //creates the excel chart from the csv when the button is clicked. 
     private void Open_Window_1_Click(object sender, RoutedEventArgs e)
     {
    
@@ -553,8 +554,8 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
 
     }
 
-
-
+    
+    
     private void releaseObject(object obj)
     {
       try
@@ -572,7 +573,13 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
         GC.Collect();
       }
     }
-    
+
+    //function to open the url to a web browser. 
+    private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+    {
+      Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+      e.Handled = true;
+    }
   }
 
 }
