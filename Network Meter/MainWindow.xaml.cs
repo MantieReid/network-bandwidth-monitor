@@ -580,6 +580,11 @@ System.Reflection.Missing.Value, System.Reflection.Missing.Value, Excel.XlSearch
       Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
       e.Handled = true;
     }
+
+    private void NetworkDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+
+    }
   }
 
 }
