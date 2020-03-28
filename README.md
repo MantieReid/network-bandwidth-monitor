@@ -8,7 +8,7 @@ Here is a gif of the program in action.
 
 
 
-![Gif](https://i.imgur.com/KSRX5SW.gifv)
+![Gif](https://i.imgur.com/KSRX5SW.gif)
 
 The Program generates a chart when the button "generate report" is clicked on.
 Here is a screenshot of an example of a chart that is generated. It shows the upload and download speeds at various points in time. 
